@@ -1,0 +1,63 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Refund_date')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-refund_date" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[refund_date]" type="text" value="{$row.refund_date}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Refund_name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-refund_name" class="form-control" name="row[refund_name]" type="text" value="{$row.refund_name|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('订单类型')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-order_type" class="form-control" step="0.01" name="row[order_type]" type="text" value="{$row.order_type|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('订单id')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-order_id" class="form-control" step="0.01" name="row[order_id]"type="text" value="{$row.order_id|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Refund_amount')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-refund_amount" class="form-control" step="0.01" name="row[refund_amount]" type="number" value="{$row.refund_amount|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Refund_contact_info')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-refund_contact_info" class="form-control" name="row[refund_contact_info]" type="text" value="{$row.refund_contact_info|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Refund_status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <div class="radio">
+            {foreach name="refundStatusList" item="vo"}
+            <label for="row[refund_status]-{$key}"><input id="row[refund_status]-{$key}" name="row[refund_status]" type="radio" value="{$key}" {in name="key" value="$row.refund_status"}checked{/in} /> {$vo}</label> 
+            {/foreach}
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Refund_biz')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-refund_biz" class="form-control" name="row[refund_biz]" type="text" value="{$row.refund_biz|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {include file="common/meta" /}
+
+  <style type="text/css">
+    body {
+      color: #999;
+      background-color: #f1f4fd;
+      background-size: cover;
+    }
+
+    a {
+      color: #444;
+    }
+
+
+    .login-screen {
+      max-width: 430px;
+      padding: 0;
+      margin: 100px auto 0 auto;
+
+    }
+
+    .login-screen .logon-tab > a {
+      display: block;
+      padding: 20px;
+      float: left;
+      width: 50%;
+      font-size: 16px;
+      text-align: center;
+      color: #616161;
+      background-color: #efefef;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+    .login-screen .logon-tab > a:hover {
+      background-color: #fafafa;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+    .login-screen .logon-tab > a.active {
+      background-color: #fff;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+    .login-screen .well {
+      border-radius: 3px;
+      -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      background: rgba(255, 255, 255, 1);
+      border: none;
+      /*overflow: hidden;*/
+      padding: 0;
+    }
+
+    @media (max-width: 767px) {
+      .login-screen {
+        padding: 0 20px;
+      }
+    }
+
+    .profile-img-card {
+      width: 100px;
+      height: 100px;
+      display: block;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      margin: -93px auto 30px;
+      border: 5px solid #fff;
+    }
+
+    .profile-name-card {
+      text-align: center;
+    }
+
+    .login-head {
+      background: #899fe1;
+      border-radius: 3px 3px 0 0;
+    }
+
+    .login-form {
+      padding: 40px 30px;
+      position: relative;
+      z-index: 99;
+    }
+
+    #login-form {
+      margin-top: 20px;
+    }
+
+    #login-form .input-group {
+      margin-bottom: 15px;
+    }
+
+    #login-form .form-control {
+      font-size: 13px;
+    }
+
+  </style>
+  <!--@formatter:off-->
+  {if $background}
+  <style type="text/css">
+    body{
+      background-image: url('{$background}');
+    }
+  </style>
+  {/if}
+  <!--@formatter:on-->
+</head>
+<body>
+<div class="container">
+  <div class="login-wrapper">
+    <div class="login-screen">
+      <div class="well">
+        <div class="logon-tab clearfix"><a href="{:url('index/login')}?url={$url|urlencode|htmlentities}">{:__('Sign in')}</a> <a class="active">{:__('Sign up')}</a></div>
+        <div class="login-head">
+          <img src="__CDN__/assets/img/login-head.png" style="width:100%;"/>
+        </div>
+        <div class="login-form">
+          <img id="profile-img" class="profile-img-card" src="__CDN__/assets/img/avatar.png"/>
+          <p id="profile-name" class="profile-name-card"></p>
+
+          <form name="form1" id="register-form" class="form-vertical" method="POST" action="">
+            <!--@AdminRegisterFormBegin-->
+            <div id="errtips" class="hide"></div>
+            {:token()}
+            <div class="form-group">
+
+              <div class="controls">
+                <input type="text" name="email" id="email" value="" data-rule="{:__('Email')}:required;email" class="form-control" placeholder="{:__('Email')}">
+                <p class="help-block"></p>
+              </div>
+            </div>
+            <div class="form-group">
+
+              <div class="controls">
+                <input type="text" id="username" name="username" value="" data-rule="{:__('Username')}:required;username" class="form-control" placeholder="{:__('Username must be 3 to 30 characters')}">
+                <p class="help-block"></p>
+              </div>
+            </div>
+            <div class="form-group">
+
+              <div class="controls">
+                <input type="password" id="password" name="password" value=""data-rule="{:__('Password')}:required;password" class="form-control" placeholder="{:__('Password must be 6 to 30 characters')}">
+                <p class="help-block"></p>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="controls">
+                <input type="text" id="mobile" name="mobile" value="" data-rule="{:__('Mobile')}:required;mobile" class="form-control" placeholder="{:__('Mobile')}">
+                <p class="help-block"></p>
+              </div>
+            </div>
+            <!--@CaptchaBegin-->
+            {if $Think.config.fastadmin.login_captcha}
+            <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon"><span class="glyphicon glyphicon-option-horizontal" aria-hidden="true"></span></div>
+                  <input type="text" name="captcha" class="form-control" placeholder="{:__('Captcha')}" data-rule="{:__('Captcha')}:required;length({$Think.config.captcha.length})" autocomplete="off"/>
+                  <span class="input-group-addon" style="padding:0;border:none;cursor:pointer;">
+                                        <img src="{:rtrim('__PUBLIC__', '/')}/index.php?s=/captcha" width="100" height="30" onclick="this.src = '{:rtrim('__PUBLIC__', '/')}/index.php?s=/captcha&r=' + Math.random();"/>
+                                </span>
+                </div>
+            </div>
+            {/if}
+            <!--@CaptchaEnd-->
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-lg btn-block">{:__('Sign up')}</button>
+              <a href="{:url('index/login')}?url={$url|urlencode|htmlentities}" class="btn btn-default btn-lg btn-block mt-3 no-border">{:__('Already have an account? Sign in')}</a>
+            </div>
+            <!--@AdminReisterFormEnd-->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{include file="common/script" /}
+</body>
+</html>
