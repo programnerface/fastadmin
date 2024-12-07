@@ -23,3 +23,14 @@ define(['backend'], function (Backend) {
     });
 
 });
+
+$(document).on("change", "#c-country_id", function(){
+    // 父级发生切换，清除子级所选
+    $("#c-zone_id").selectPageClear();
+});
+
+// 给子级设置 data-params 属性
+$("#c-zone_id").data("params", function(){
+    // 绑定父级的值
+    return {custom: {country_id:$("#c-country_id").val()}};
+});
