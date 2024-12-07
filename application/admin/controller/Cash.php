@@ -17,7 +17,7 @@ class Cash extends Backend
      * @var \app\admin\model\Cash
      */
     protected $model = null;
-
+    protected $dataLimit = 'personal';
     public function _initialize()
     {
         parent::_initialize();

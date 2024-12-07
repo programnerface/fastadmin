@@ -16,7 +16,8 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             });
 
             var table = $("#table");
-
+            var name = Config.refund_name;
+            console.log(name)
             // 初始化表格
             table.bootstrapTable({
                 url: $.fn.bootstrapTable.defaults.extend.index_url,
@@ -26,6 +27,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     [
                         {checkbox: true},
                         {field: 'ID', title: __('ID')},
+                        // {field: 'admin_id', title: __('Admin_id'),visible: name},
                         {field: 'refund_date', title: __('Refund_date'), operate:'RANGE', addclass:'datetimerange', autocomplete:false},
                         {field: 'refund_name', title: __('Refund_name'), operate: 'LIKE', table: table, class: 'autocontent', formatter: Table.api.formatter.content},
                         {field: 'order_type', title: __('订单类型'), operate:'BETWEEN'},
@@ -43,9 +45,17 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             Table.api.bindevent(table);
         },
         add: function () {
+            if (!Config.isSuperAdmin){
+                $('#refund_date').hide();
+                $('#refund_status').hide();
+            }
             Controller.api.bindevent();
         },
         edit: function () {
+            if (!Config.isSuperAdmin){
+                $('#refund_date').hide();
+                $('#refund_status').hide();
+            }
             Controller.api.bindevent();
         },
         api: {

@@ -23,6 +23,8 @@ class Refund extends Backend
         parent::_initialize();
         $this->model = new \app\admin\model\Refund;
         $this->view->assign("refundStatusList", $this->model->getRefundStatusList());
+        $this->assignconfig('isSuperAdmin',$this->auth->isSuperAdmin());
+        $this->assignconfig('refund_name',$this->auth->check('refund/refund_name'));
 
     }
 

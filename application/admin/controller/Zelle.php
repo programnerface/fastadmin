@@ -17,7 +17,7 @@ class Zelle extends Backend
      * @var \app\admin\model\Zelle
      */
     protected $model = null;
-
+    protected $dataLimit = 'personal';
     public function _initialize()
     {
         parent::_initialize();
@@ -60,8 +60,11 @@ class Zelle extends Backend
                     ->paginate($limit);
 
             foreach ($list as $row) {
-                
                 $row->getRelation('admin')->visible(['username']);
+                $row->getRelation('admin')->visible(['zelle_fees']);
+                $row->getRelation('admin')->visible(['cash_fees']);
+                $row->getRelation('admin')->visible(['venmo_fees']);
+                $row->getRelation('admin')->visible(['square_fees']);
 				$row->getRelation('type')->visible(['name']);
 				$row->getRelation('country')->visible(['name']);
 				$row->getRelation('zone')->visible(['name']);

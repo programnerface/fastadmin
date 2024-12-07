@@ -66,21 +66,25 @@ class DayTrade extends Backend
     }
     public function getOderData()
     {
-        $results = Db::table('fa_merchant_zelleorder')
+        $results = Db::table('fa_zelle')
             ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_zelleorder" as source')
+            ->where('order_check','审核通过')
             ->union(function ($query) {
-                $query->table('fa_merchant_cashorder')
+                $query->table('fa_cash')
                     ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_cashorder" as source')
+                    ->where('order_check','审核通过')
                     ->group('DATE(order_date)'); // 必须在子查询中也加 GROUP BY
             }, true)
             ->union(function ($query) {
-                $query->table('fa_merchant_venmoorders')
+                $query->table('fa_venmo')
                     ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_venmoorders" as source')
+                    ->where('order_check','审核通过')
                     ->group('DATE(order_date)'); // 必须在子查询中也加 GROUP BY
             }, true)
             ->union(function ($query) {
-                $query->table('fa_merchant_squareorders')
+                $query->table('fa_square')
                     ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_squareorders" as source')
+                    ->where('order_check','审核通过')
                     ->group('DATE(order_date)'); // 必须在子查询中也加 GROUP BY
             }, true)
             ->group('DATE(order_date)') // 确保主查询中也有 GROUP BY
@@ -129,35 +133,62 @@ class DayTrade extends Backend
         return $result;
     }
 
+    public function Test(){
+        $admin_id =$this->GetAdminId();
+        $results = Db::table('fa_zelle')
+        ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_zelleorder" as source')
+        ->where([
+                'admin_id' => $admin_id,
+                'order_check'=>'审核通过'
+            ]) // 给主表查询添加条件
+        ->group('DATE(order_date)')
+        ->order('order_date', 'asc')
+        ->select();
+        var_dump($results);
+        exit;
+    }
     //获取当前用户的订单数据
     public function getOrderDataById()
     {
 
         $admin_id =$this->GetAdminId();
-        $results = Db::table('fa_merchant_zelleorder')
+        $results = Db::table('fa_zelle')
             ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_zelleorder" as source')
-            ->where('admin_id', $admin_id) // 给主表查询添加条件
+            ->where([
+                'admin_id' => $admin_id,
+                'order_check'=>'审核通过'
+            ]) // 给主表查询添加条件
             ->group('DATE(order_date)') // 确保主查询中有 GROUP BY
             ->union(function ($query) use ($admin_id) {
-                $query->table('fa_merchant_cashorder')
+                $query->table('fa_cash')
                     ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_cashorder" as source')
-                    ->where('admin_id', $admin_id) // 在子查询中加上 admin_id 条件
+                    ->where([
+                        'admin_id' => $admin_id,
+                        'order_check'=>'审核通过'
+                    ]) // 在子查询中加上 admin_id 条件
                     ->group('DATE(order_date)'); // 子查询需要添加 GROUP BY
             }, true)
             ->union(function ($query) use ($admin_id) {
-                $query->table('fa_merchant_venmoorders')
+                $query->table('fa_venmo')
                     ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_venmoorders" as source')
-                    ->where('admin_id', $admin_id) // 在子查询中加上 admin_id 条件
+                    ->where([
+                        'admin_id' => $admin_id,
+                        'order_check'=>'审核通过'
+                    ]) // 在子查询中加上 admin_id 条件
                     ->group('DATE(order_date)'); // 子查询需要添加 GROUP BY
             }, true)
             ->union(function ($query) use ($admin_id) {
-                $query->table('fa_merchant_squareorders')
+                $query->table('fa_square')
                     ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_squareorders" as source')
-                    ->where('admin_id', $admin_id) // 在子查询中加上 admin_id 条件
+                    ->where([
+                        'admin_id' => $admin_id,
+                        'order_check'=>'审核通过'
+                    ]) // 在子查询中加上 admin_id 条件
                     ->group('DATE(order_date)'); // 子查询需要添加 GROUP BY
             }, true)
             ->order('order_date', 'asc')
             ->select();
+
         $result = [];
 
         foreach ($results as $item) {
@@ -417,7 +448,7 @@ class DayTrade extends Backend
                 db::table('fa_day_trade_table')
                     ->where([
                         'order_date' => $date['order_date'],
-                        'admin_id' => $this->GetAdminId()
+                        'admin_id' => $this->GetAdminId(),
                     ])
                     ->update([
                         'payment_amount' => $date['day_amount']??0.0,

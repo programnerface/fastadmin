@@ -17,7 +17,7 @@ class Venmo extends Backend
      * @var \app\admin\model\Venmo
      */
     protected $model = null;
-
+    protected $dataLimit = 'personal';
     public function _initialize()
     {
         parent::_initialize();

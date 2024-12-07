@@ -39,6 +39,7 @@ class MonthTrade extends Backend
 
     public function GetMonthTrade(){
         //删除重复数据
+        $this->CheckData();
         $table=$this->model->getTable();
         $admin_id=$this->GetAdminId();
         $this->deleteDuplicates($table,'month','%Y-%m',$admin_id);
@@ -112,6 +113,27 @@ class MonthTrade extends Backend
         }else{
             //月份数据存在 返回查询到的数据
             return $update;
+        }
+    }
+
+    //
+    public function CheckData(){
+        $table=$this->model->getTable();
+        // 获取日统计表的日期和 ID
+        $dayquery = Db::table('fa_day_trade_table')->field('order_date')->select();
+
+        // 将日统计表的日期提取成数组
+        $dayDates = array_column($dayquery, 'order_date');
+
+        // 获取月统计表的日期和 ID
+        $monthquery = Db::table($table)->field('id, month as order_date')->select();
+
+        // 将月统计表的日期和 ID 进行比对
+        foreach ($monthquery as $row) {
+            if (!in_array($row['order_date'], $dayDates)) {
+                // 删除月统计表中与日统计表日期不同的记录
+                Db::table($table)->where('id', $row['id'])->delete();
+            }
         }
     }
 
