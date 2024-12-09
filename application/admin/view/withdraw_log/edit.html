@@ -6,10 +6,16 @@
             <input id="c-withdrawal_date" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[withdrawal_date]" type="text" value="{$row.withdrawal_date}">
         </div>
     </div>
-    <div class="form-group">
+    <div class="form-group" style="display: none">
         <label class="control-label col-xs-12 col-sm-2">{:__('Merchant_name')}:</label>
         <div class="col-xs-12 col-sm-8">
             <input id="c-merchant_name" class="form-control" name="row[merchant_name]" type="text" value="{$row.merchant_name|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group"  id="merchant_name">
+        <label class="control-label col-xs-12 col-sm-2">{:__('商户名称')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-admin_id" class="form-control selectpage" data-source="auth/admin/index" data-primary-key="id" data-field="username" name="row[admin_id]" type="text" value="{$row.admin_id|htmlentities}">
         </div>
     </div>
     <div class="form-group">
@@ -42,6 +48,30 @@
                 <span class="msg-box n-right" for="c-withdrawal_img"></span>
             </div>
             <ul class="row list-inline faupload-preview" id="p-withdrawal_img"></ul>
+        </div>
+    </div>
+    <div class="form-group" id="withdrawal_status">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Withdrawal_status')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <div class="radio">
+            {foreach name="withdrawalStatusList" item="vo"}
+            <label for="row[withdrawal_status]-{$key}"><input id="row[withdrawal_status]-{$key}" name="row[withdrawal_status]" type="radio" value="{$key}" {in name="key" value="$row.withdrawal_status"}checked{/in} /> {$vo}</label> 
+            {/foreach}
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group" id="withdrawal_check">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Withdrawal_check')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-withdrawal_check" class="form-control selectpicker" name="row[withdrawal_check]">
+                {foreach name="withdrawalCheckList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.withdrawal_check"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
         </div>
     </div>
     <div class="form-group layer-footer">

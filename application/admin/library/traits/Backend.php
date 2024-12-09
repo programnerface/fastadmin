@@ -100,6 +100,7 @@ trait Backend
             return $this->view->fetch();
         }
         $params = $this->request->post('row/a');
+
         if (empty($params)) {
             $this->error(__('Parameter %s can not be empty', ''));
         }

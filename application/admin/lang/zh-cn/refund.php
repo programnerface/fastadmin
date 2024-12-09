@@ -6,5 +6,6 @@ return [
     'Refund_amount'       => '金额',
     'Refund_contact_info' => '邮箱/电话/Cashtag',
     'Refund_status'       => '处理结果',
-    'Refund_biz'          => '备注'
+    'Refund_biz'          => '备注',
+    'Refund_img'          => '退款截图'
 ];

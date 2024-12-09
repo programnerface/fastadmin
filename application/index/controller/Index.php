@@ -13,7 +13,8 @@ class Index extends Frontend
 
     public function index()
     {
-        return $this->view->fetch();
+//        return $this->view->fetch();
+      return  $this->redirect($this->request->domain() . '/sFGucSHOMQ.php/index/login');
     }
 
 }

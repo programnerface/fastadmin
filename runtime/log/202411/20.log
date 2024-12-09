@@ -1,0 +1,3787 @@
+---------------------------------------------------------------
+[ 2024-11-20T18:08:21+08:00 ] 127.0.0.1 POST fastadmin.com/sFGucSHOMQ.php/command/command/action/command
+[运行时间：0.053329s] [吞吐率：18.75req/s] [内存消耗：4,304.58kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001547s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000560s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000015s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'command',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://fastadmin.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '102',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+)
+[ info ] [ PARAM ] array (
+  'commandtype' => 'menu',
+  'allcontroller' => '1',
+  'delete' => '0',
+  'force' => '0',
+  'controllerfile_text' => '',
+  'controllerfile' => '',
+  'action' => 'command',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000791s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->command[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.003304s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:08:56+08:00 ] 127.0.0.1 POST fastadmin.com/sFGucSHOMQ.php/command/command/action/execute
+[运行时间：0.094116s] [吞吐率：10.63req/s] [内存消耗：5,276.18kb] [文件加载：96]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000984s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000445s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000010s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'command',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://fastadmin.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '366',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+)
+[ info ] [ PARAM ] array (
+  'commandtype' => 'crud',
+  'isrelation' => '1',
+  'local' => '1',
+  'delete' => '0',
+  'force' => '0',
+  'table' => 'fa_merchant_zelleorder',
+  'controller' => 'MerchantZelleorder',
+  'model' => '',
+  'setcheckboxsuffix' => '',
+  'enumradiosuffix' => '',
+  'imagefield' => '',
+  'filefield' => '',
+  'intdatesuffix' => '',
+  'switchsuffix' => '',
+  'citysuffix' => '',
+  'selectpagesuffix' => '',
+  'selectpagessuffix' => '',
+  'ignorefields' => '',
+  'sortfield' => '',
+  'editorsuffix' => '',
+  'headingfilterfield' => '',
+  'tagsuffix' => '',
+  'jsonsuffix' => '',
+  'fixedcolumns' => '',
+  'action' => 'execute',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000768s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->command[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.002099s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:08:56+08:00 ] 127.0.0.1 POST fastadmin.com/sFGucSHOMQ.php/index/index
+[运行时间：0.055156s] [吞吐率：18.13req/s] [内存消耗：4,536.09kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000766s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000336s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000013s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://fastadmin.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '18',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'refreshmenu',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000658s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Index.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000270s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:08:56+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1732096288116
+[运行时间：0.081321s] [吞吐率：12.30req/s] [内存消耗：4,315.92kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000016s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000994s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000439s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1732096288116',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000743s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000444s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:08:56+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1732096288117
+[运行时间：0.065945s] [吞吐率：15.16req/s] [内存消耗：4,315.92kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002048s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000438s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000013s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1732096288117',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000727s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000117s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:03+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/detail/ids/1?dialog=1
+[运行时间：0.071079s] [吞吐率：14.07req/s] [内存消耗：4,403.23kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000025s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001200s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000376s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000014s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001224s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->detail[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\command\detail.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+  6 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000111s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:03+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=command&lang=zh-cn&v=1732097343
+[运行时间：0.022658s] [吞吐率：44.13req/s] [内存消耗：3,204.53kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000763s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000351s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000011s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'command',
+  'lang' => 'zh-cn',
+  'v' => '1732097343',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000730s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000095s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:14+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1732096288118
+[运行时间：0.038187s] [吞吐率：26.19req/s] [内存消耗：4,315.92kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000920s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000669s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000014s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1732096288118',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001039s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000137s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:20+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/auth/rule?addtabs=1
+[运行时间：0.056501s] [吞吐率：17.70req/s] [内存消耗：4,644.20kb] [文件加载：86]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000029s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001003s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000402s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth.rule',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000672s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/auth/rule.php
+[ info ] [ RUN ] app\admin\controller\auth\Rule->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\auth\Rule.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\auth\rule\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'ruledata',
+  6 => 'menutypeList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000148s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:20+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=auth.rule&lang=zh-cn&v=1732097359
+[运行时间：0.021411s] [吞吐率：46.71req/s] [内存消耗：3,191.38kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000785s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000336s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000014s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'auth.rule',
+  'lang' => 'zh-cn',
+  'v' => '1732097359',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000679s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/auth/rule.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000079s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:20+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/auth/rule/index?sort=&order=desc&_=1732097360202
+[运行时间：0.027632s] [吞吐率：36.19req/s] [内存消耗：4,518.34kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000918s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000351s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth.rule',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => '',
+  'order' => 'desc',
+  '_' => '1732097360202',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000663s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/auth/rule.php
+[ info ] [ RUN ] app\admin\controller\auth\Rule->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\auth\Rule.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000090s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:28+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/auth/rule/index?sort=&order=desc&_=1732097360203
+[运行时间：0.054758s] [吞吐率：18.26req/s] [内存消耗：4,518.34kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000758s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000328s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000011s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth.rule',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => '',
+  'order' => 'desc',
+  '_' => '1732097360203',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000658s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/auth/rule.php
+[ info ] [ RUN ] app\admin\controller\auth\Rule->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\auth\Rule.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000113s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:29+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/auth/rule/index?sort=&order=desc&_=1732097360204
+[运行时间：0.054754s] [吞吐率：18.26req/s] [内存消耗：4,518.34kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000765s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000316s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth.rule',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => '',
+  'order' => 'desc',
+  '_' => '1732097360204',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000666s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/auth/rule.php
+[ info ] [ RUN ] app\admin\controller\auth\Rule->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\auth\Rule.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000086s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:30+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/auth/rule/index?sort=&order=desc&_=1732097360205
+[运行时间：0.054069s] [吞吐率：18.49req/s] [内存消耗：4,518.34kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000916s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000371s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth.rule',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => '',
+  'order' => 'desc',
+  '_' => '1732097360205',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000685s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/auth/rule.php
+[ info ] [ RUN ] app\admin\controller\auth\Rule->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\auth\Rule.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000132s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:30+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/auth/rule/index?sort=&order=desc&_=1732097360206
+[运行时间：0.048031s] [吞吐率：20.82req/s] [内存消耗：4,518.34kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000806s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000312s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000017s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth.rule',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => '',
+  'order' => 'desc',
+  '_' => '1732097360206',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000722s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/auth/rule.php
+[ info ] [ RUN ] app\admin\controller\auth\Rule->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\auth\Rule.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000105s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:30+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/auth/rule/index?sort=&order=desc&_=1732097360207
+[运行时间：0.062715s] [吞吐率：15.95req/s] [内存消耗：4,518.34kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001415s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000611s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000021s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth.rule',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => '',
+  'order' => 'desc',
+  '_' => '1732097360207',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001283s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/auth/rule.php
+[ info ] [ RUN ] app\admin\controller\auth\Rule->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\auth\Rule.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000089s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:31+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/auth/rule/index?sort=&order=desc&_=1732097360208
+[运行时间：0.079939s] [吞吐率：12.51req/s] [内存消耗：4,518.34kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001006s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000532s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000023s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'auth.rule',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => '',
+  'order' => 'desc',
+  '_' => '1732097360208',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001648s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/auth/rule.php
+[ info ] [ RUN ] app\admin\controller\auth\Rule->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\auth\Rule.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000096s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:48+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/general/config?addtabs=1
+[运行时间：0.081035s] [吞吐率：12.34req/s] [内存消耗：4,560.25kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002733s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000412s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000014s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.config',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000660s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ RUN ] app\admin\controller\general\Config->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\general\Config.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\general\config\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'siteList',
+  6 => 'typeList',
+  7 => 'ruleList',
+  8 => 'groupList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000164s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:49+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=general.config&lang=zh-cn&v=1732097388
+[运行时间：0.023582s] [吞吐率：42.41req/s] [内存消耗：3,217.29kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000773s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000319s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000011s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'general.config',
+  'lang' => 'zh-cn',
+  'v' => '1732097388',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000652s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/general/config.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000105s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:51+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/general/attachment?addtabs=1
+[运行时间：0.091343s] [吞吐率：10.95req/s] [内存消耗：4,398.86kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000047s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.003238s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000576s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000016s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.attachment',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001024s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/general/attachment.php
+[ info ] [ RUN ] app\admin\controller\general\Attachment->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\general\Attachment.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\general\attachment\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'mimetypeList',
+  6 => 'categoryList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000350s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:51+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=general.attachment&lang=zh-cn&v=1732097390
+[运行时间：0.027808s] [吞吐率：35.96req/s] [内存消耗：3,192.23kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000020s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001486s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000628s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000020s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'general.attachment',
+  'lang' => 'zh-cn',
+  'v' => '1732097390',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001253s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/general/attachment.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000125s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:51+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/general/attachment/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1732097391171
+[运行时间：0.058381s] [吞吐率：17.13req/s] [内存消耗：4,314.99kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001099s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000402s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000014s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.attachment',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1732097391171',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000882s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/general/attachment.php
+[ info ] [ RUN ] app\admin\controller\general\Attachment->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\general\Attachment.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000085s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:53+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/general/attachment/add?dialog=1
+[运行时间：0.068508s] [吞吐率：14.60req/s] [内存消耗：4,418.70kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000933s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000460s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000015s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.attachment',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000704s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/general/attachment.php
+[ info ] [ RUN ] app\admin\controller\general\Attachment->add[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\general\Attachment.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\general\attachment\add.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'mimetypeList',
+  6 => 'categoryList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000198s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:09:54+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=general.attachment&lang=zh-cn&v=1732097393
+[运行时间：0.025830s] [吞吐率：38.71req/s] [内存消耗：3,192.23kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000019s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001555s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000485s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000014s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'general.attachment',
+  'lang' => 'zh-cn',
+  'v' => '1732097393',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000670s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/general/attachment.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000114s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:02+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/general/attachment/add?dialog=1
+[运行时间：0.056724s] [吞吐率：17.63req/s] [内存消耗：4,274.44kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000034s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001746s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000423s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000015s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'general.attachment',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000725s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/general/attachment.php
+[ info ] [ RUN ] app\admin\controller\general\Attachment->add[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\general\Attachment.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\general\attachment\add.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'mimetypeList',
+  6 => 'categoryList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000336s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:02+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=general.attachment&lang=zh-cn&v=1732097402
+[运行时间：0.034609s] [吞吐率：28.89req/s] [内存消耗：3,192.23kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001558s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000629s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000022s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'general.attachment',
+  'lang' => 'zh-cn',
+  'v' => '1732097402',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001438s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/general/attachment.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000120s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:08+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/user/user?addtabs=1
+[运行时间：0.055256s] [吞吐率：18.10req/s] [内存消耗：4,382.23kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000784s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000346s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000011s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.user',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000675s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ RUN ] app\admin\controller\user\User->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\user\User.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\user\user\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000213s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:08+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=user.user&lang=zh-cn&v=1732097408
+[运行时间：0.033081s] [吞吐率：30.23req/s] [内存消耗：3,176.36kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001898s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000786s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000019s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user.user',
+  'lang' => 'zh-cn',
+  'v' => '1732097408',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001497s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000083s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:08+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/user/user/index?sort=user.id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1732097408217
+[运行时间：0.040984s] [吞吐率：24.40req/s] [内存消耗：4,452.10kb] [文件加载：88]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000757s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000327s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000011s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'user.id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1732097408217',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000670s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/user/user.php
+[ info ] [ RUN ] app\admin\controller\user\User->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\user\User.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000094s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:08+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/user/group?addtabs=1
+[运行时间：0.046207s] [吞吐率：21.64req/s] [内存消耗：4,359.30kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000756s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000322s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000011s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.group',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000658s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/user/group.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\user\group\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000111s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:08+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=user.group&lang=zh-cn&v=1732097408
+[运行时间：0.019517s] [吞吐率：51.24req/s] [内存消耗：3,167.73kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000952s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000362s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user.group',
+  'lang' => 'zh-cn',
+  'v' => '1732097408',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000669s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/user/group.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000080s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:08+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/user/group/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1732097408852
+[运行时间：0.030959s] [吞吐率：32.30req/s] [内存消耗：4,274.28kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000816s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000351s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000016s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.group',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1732097408852',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000658s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/user/group.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000087s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:09+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/user/rule?addtabs=1
+[运行时间：0.062058s] [吞吐率：16.11req/s] [内存消耗：4,566.11kb] [文件加载：87]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000761s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000333s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.rule',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000654s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/user/rule.php
+[ info ] [ RUN ] app\admin\controller\user\Rule->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\user\Rule.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\user\rule\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+  6 => 'ruledata',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000216s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:09+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=user.rule&lang=zh-cn&v=1732097409
+[运行时间：0.019462s] [吞吐率：51.38req/s] [内存消耗：3,179.69kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000733s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000313s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000011s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'user.rule',
+  'lang' => 'zh-cn',
+  'v' => '1732097409',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000628s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/user/rule.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000074s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:09+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/user/rule/index?sort=weigh&order=desc&_=1732097409531
+[运行时间：0.049768s] [吞吐率：20.09req/s] [内存消耗：4,325.81kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000814s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000352s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000015s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user.rule',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'weigh',
+  'order' => 'desc',
+  '_' => '1732097409531',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000670s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/user/rule.php
+[ info ] [ RUN ] app\admin\controller\user\Rule->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\user\Rule.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000094s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:12+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1732096288119
+[运行时间：0.062430s] [吞吐率：16.02req/s] [内存消耗：4,315.92kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000934s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000516s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000020s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1732096288119',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000751s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000186s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:15+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/detail/ids/1?dialog=1
+[运行时间：0.055480s] [吞吐率：18.02req/s] [内存消耗：4,266.03kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001033s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000704s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000028s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000706s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->detail[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\command\detail.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+  6 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000108s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:15+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=command&lang=zh-cn&v=1732097415
+[运行时间：0.025554s] [吞吐率：39.13req/s] [内存消耗：3,204.53kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000997s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000397s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000015s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'command',
+  'lang' => 'zh-cn',
+  'v' => '1732097415',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000907s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000153s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:26+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1732096288120
+[运行时间：0.071228s] [吞吐率：14.04req/s] [内存消耗：4,315.92kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.002067s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000799s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000018s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1732096288120',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001050s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000276s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:27+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1732096288121
+[运行时间：0.057427s] [吞吐率：17.41req/s] [内存消耗：4,315.92kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000880s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000350s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000014s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1732096288121',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000759s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000156s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:35+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/detail/ids/1?dialog=1
+[运行时间：0.066205s] [吞吐率：15.10req/s] [内存消耗：4,266.03kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000796s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000320s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000011s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000844s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->detail[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\command\detail.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+  6 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000198s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:35+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=command&lang=zh-cn&v=1732097435
+[运行时间：0.023849s] [吞吐率：41.93req/s] [内存消耗：3,204.53kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001231s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000517s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000018s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'command',
+  'lang' => 'zh-cn',
+  'v' => '1732097435',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001097s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000089s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:45+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/add?dialog=1
+[运行时间：0.060839s] [吞吐率：16.44req/s] [内存消耗：4,319.87kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000970s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000347s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000013s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000666s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->add[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\command\add.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+  6 => 'tableList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000208s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:45+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=command&lang=zh-cn&v=1732097445
+[运行时间：0.019941s] [吞吐率：50.15req/s] [内存消耗：3,204.53kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000831s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000359s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'command',
+  'lang' => 'zh-cn',
+  'v' => '1732097445',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000663s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000085s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:46+08:00 ] 127.0.0.1 POST fastadmin.com/sFGucSHOMQ.php/command/get_field_list
+[运行时间：0.050472s] [吞吐率：19.81req/s] [内存消耗：4,303.95kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000027s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001314s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000544s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000036s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'get_field_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://fastadmin.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '14',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+)
+[ info ] [ PARAM ] array (
+  'table' => 'fa_admin',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000766s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->get_field_list[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.003474s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:51+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/detail/ids/1?dialog=1
+[运行时间：0.060209s] [吞吐率：16.61req/s] [内存消耗：4,266.28kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000868s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000389s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000017s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000753s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->detail[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\command\detail.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+  6 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000147s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:10:51+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=command&lang=zh-cn&v=1732097451
+[运行时间：0.035052s] [吞吐率：28.53req/s] [内存消耗：3,204.53kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000018s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001062s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000618s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000026s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'command',
+  'lang' => 'zh-cn',
+  'v' => '1732097451',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001325s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000194s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:11:09+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/detail/ids/1?dialog=1
+[运行时间：0.060413s] [吞吐率：16.55req/s] [内存消耗：4,266.28kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000759s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000309s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000011s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'detail',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+  'ids' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000651s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->detail[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\command\detail.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+  6 => 'row',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000251s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:11:09+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=command&lang=zh-cn&v=1732097469
+[运行时间：0.025903s] [吞吐率：38.61req/s] [内存消耗：3,204.53kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001060s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000493s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000014s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'command',
+  'lang' => 'zh-cn',
+  'v' => '1732097469',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000744s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000250s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:11:17+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/add?dialog=1
+[运行时间：0.046757s] [吞吐率：21.39req/s] [内存消耗：4,320.55kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001270s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000460s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000013s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000751s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->add[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\command\add.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+  6 => 'tableList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000235s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:11:17+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=command&lang=zh-cn&v=1732097477
+[运行时间：0.037787s] [吞吐率：26.46req/s] [内存消耗：3,204.53kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000031s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001481s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000594s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000026s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'command',
+  'lang' => 'zh-cn',
+  'v' => '1732097477',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001547s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000125s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:11:17+08:00 ] 127.0.0.1 POST fastadmin.com/sFGucSHOMQ.php/command/get_field_list
+[运行时间：0.031439s] [吞吐率：31.81req/s] [内存消耗：4,303.95kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001308s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000504s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000020s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'get_field_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://fastadmin.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '14',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+)
+[ info ] [ PARAM ] array (
+  'table' => 'fa_admin',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000846s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->get_field_list[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.003789s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:11:23+08:00 ] 127.0.0.1 POST fastadmin.com/sFGucSHOMQ.php/command/command/action/command
+[运行时间：0.061356s] [吞吐率：16.30req/s] [内存消耗：4,304.75kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000772s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000317s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000011s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'command',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://fastadmin.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '102',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+)
+[ info ] [ PARAM ] array (
+  'commandtype' => 'menu',
+  'allcontroller' => '1',
+  'delete' => '0',
+  'force' => '0',
+  'controllerfile_text' => '',
+  'controllerfile' => '',
+  'action' => 'command',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000654s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->command[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.011743s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:11:40+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/add?dialog=1
+[运行时间：0.057965s] [吞吐率：17.25req/s] [内存消耗：4,320.55kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000745s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000322s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000656s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->add[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\command\add.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+  6 => 'tableList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000155s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:11:40+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=command&lang=zh-cn&v=1732097500
+[运行时间：0.020224s] [吞吐率：49.45req/s] [内存消耗：3,204.53kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000015s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000807s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000327s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'command',
+  'lang' => 'zh-cn',
+  'v' => '1732097500',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000671s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000090s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:11:40+08:00 ] 127.0.0.1 POST fastadmin.com/sFGucSHOMQ.php/command/get_field_list
+[运行时间：0.059069s] [吞吐率：16.93req/s] [内存消耗：4,303.95kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000016s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000763s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000306s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'get_field_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://fastadmin.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '14',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+)
+[ info ] [ PARAM ] array (
+  'table' => 'fa_admin',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000886s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->get_field_list[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.007122s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:11:48+08:00 ] 127.0.0.1 POST fastadmin.com/sFGucSHOMQ.php/command/del
+[运行时间：0.078102s] [吞吐率：12.80req/s] [内存消耗：4,306.64kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000030s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000870s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000342s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000013s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'del',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://fastadmin.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '24',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+)
+[ info ] [ PARAM ] array (
+  'action' => 'del',
+  'ids' => '1',
+  'params' => '',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000673s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\common\controller\Backend->del[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.005827s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:11:48+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1732096288122
+[运行时间：0.056405s] [吞吐率：17.73req/s] [内存消耗：4,315.74kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001019s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000383s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1732096288122',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000677s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000130s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:14:10+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command?ref=addtabs
+[运行时间：0.056963s] [吞吐率：17.56req/s] [内存消耗：4,183.35kb] [文件加载：79]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000011s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000985s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000435s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000010s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'ref' => 'addtabs',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000719s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000357s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:14:10+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/index/index
+[运行时间：0.059453s] [吞吐率：16.82req/s] [内存消耗：4,534.95kb] [文件加载：87]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000016s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000979s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000425s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000013s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000766s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\index\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'menulist',
+  6 => 'navlist',
+  7 => 'fixedmenu',
+  8 => 'referermenu',
+  9 => 'title',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000147s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:14:10+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command?addtabs=1
+[运行时间：0.056334s] [吞吐率：17.75req/s] [内存消耗：4,259.07kb] [文件加载：82]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000016s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001256s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000471s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000049s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000769s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\library\traits\Backend.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\command\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000180s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:14:11+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/dashboard?addtabs=1
+[运行时间：0.100747s] [吞吐率：9.93req/s] [内存消耗：4,406.74kb] [文件加载：86]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001187s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.001058s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000017s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'dashboard',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'addtabs' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000805s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ RUN ] app\admin\controller\Dashboard->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Dashboard.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\dashboard\index.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'totaluser',
+  6 => 'totaladdon',
+  7 => 'totaladmin',
+  8 => 'totalcategory',
+  9 => 'todayusersignup',
+  10 => 'todayuserlogin',
+  11 => 'sevendau',
+  12 => 'thirtydau',
+  13 => 'threednu',
+  14 => 'sevendnu',
+  15 => 'dbtablenums',
+  16 => 'dbsize',
+  17 => 'totalworkingaddon',
+  18 => 'attachmentnums',
+  19 => 'attachmentsize',
+  20 => 'picturenums',
+  21 => 'picturesize',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000198s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:14:11+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=index&lang=zh-cn&v=1732097650
+[运行时间：0.020332s] [吞吐率：49.18req/s] [内存消耗：3,212.55kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000010s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000744s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000368s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000012s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; thinkphp_show_page_trace=0|0; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'index',
+  'lang' => 'zh-cn',
+  'v' => '1732097650',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000635s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/index.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000138s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:14:11+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=command&lang=zh-cn&v=1732097650
+[运行时间：0.024262s] [吞吐率：41.22req/s] [内存消耗：3,204.72kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000017s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001025s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000413s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000013s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; thinkphp_show_page_trace=0|0; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'command',
+  'lang' => 'zh-cn',
+  'v' => '1732097650',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000799s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000204s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:14:11+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=dashboard&lang=zh-cn&v=1732097650
+[运行时间：0.026386s] [吞吐率：37.90req/s] [内存消耗：3,181.43kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001476s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000784s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000017s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; thinkphp_show_page_trace=0|0; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'dashboard',
+  'lang' => 'zh-cn',
+  'v' => '1732097650',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000754s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/dashboard.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000102s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:14:11+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/index?sort=id&order=desc&offset=0&limit=10&filter=%7B%7D&op=%7B%7D&_=1732097651170
+[运行时间：0.037975s] [吞吐率：26.33req/s] [内存消耗：4,315.74kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001078s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000444s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000013s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; thinkphp_show_page_trace=0|0; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/json',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+)
+[ info ] [ PARAM ] array (
+  'sort' => 'id',
+  'order' => 'desc',
+  'offset' => '0',
+  'limit' => '10',
+  'filter' => '{}',
+  'op' => '{}',
+  '_' => '1732097651170',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000767s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\common\controller\Backend->index[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\library\traits\Backend.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000148s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:14:14+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/command/add?dialog=1
+[运行时间：0.032795s] [吞吐率：30.49req/s] [内存消耗：4,320.80kb] [文件加载：83]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000013s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000780s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000391s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000023s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; thinkphp_show_page_trace=0|0; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'dialog' => '1',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000661s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->add[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ VIEW ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\command\add.html [ array (
+  0 => 'breadcrumb',
+  1 => 'site',
+  2 => 'config',
+  3 => 'auth',
+  4 => 'admin',
+  5 => 'statusList',
+  6 => 'tableList',
+) ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000091s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:14:14+08:00 ] 127.0.0.1 GET fastadmin.com/sFGucSHOMQ.php/ajax/lang?callback=define&controllername=command&lang=zh-cn&v=1732097654
+[运行时间：0.021372s] [吞吐率：46.79req/s] [内存消耗：3,204.72kb] [文件加载：74]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000014s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000928s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000394s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000015s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ajax',
+    2 => 'lang',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; thinkphp_show_page_trace=0|0; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+  'content-length' => '',
+  'content-type' => '',
+)
+[ info ] [ PARAM ] array (
+  'callback' => 'define',
+  'controllername' => 'command',
+  'lang' => 'zh-cn',
+  'v' => '1732097654',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000782s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/ajax.php
+[ info ] [ RUN ] app\admin\controller\Ajax->lang[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Ajax.php ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.000081s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:14:14+08:00 ] 127.0.0.1 POST fastadmin.com/sFGucSHOMQ.php/command/get_field_list
+[运行时间：0.036187s] [吞吐率：27.63req/s] [内存消耗：4,304.20kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001781s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000452s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000017s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'get_field_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; thinkphp_show_page_trace=0|0; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://fastadmin.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '14',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+)
+[ info ] [ PARAM ] array (
+  'table' => 'fa_admin',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000908s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->get_field_list[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.003551s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:15:13+08:00 ] 127.0.0.1 POST fastadmin.com/sFGucSHOMQ.php/command/get_field_list
+[运行时间：0.079215s] [吞吐率：12.62req/s] [内存消耗：4,304.24kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000022s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001462s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000660s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000023s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'get_field_list',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; thinkphp_show_page_trace=0|0; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://fastadmin.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '28',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+)
+[ info ] [ PARAM ] array (
+  'table' => 'fa_merchant_zelleorder',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001138s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->get_field_list[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.016478s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:15:22+08:00 ] 127.0.0.1 POST fastadmin.com/sFGucSHOMQ.php/command/command/action/command
+[运行时间：0.029946s] [吞吐率：33.39req/s] [内存消耗：4,313.25kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000012s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000811s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000323s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000011s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'command',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; thinkphp_show_page_trace=0|0; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://fastadmin.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '353',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+)
+[ info ] [ PARAM ] array (
+  'commandtype' => 'crud',
+  'isrelation' => '0',
+  'local' => '1',
+  'delete' => '0',
+  'force' => '0',
+  'table' => 'fa_merchant_zelleorder',
+  'controller' => 'MerchantZelleorder',
+  'model' => '',
+  'setcheckboxsuffix' => '',
+  'enumradiosuffix' => '',
+  'imagefield' => '',
+  'filefield' => '',
+  'intdatesuffix' => '',
+  'switchsuffix' => '',
+  'citysuffix' => '',
+  'selectpagesuffix' => '',
+  'selectpagessuffix' => '',
+  'ignorefields' => '',
+  'sortfield' => '',
+  'editorsuffix' => '',
+  'headingfilterfield' => '',
+  'tagsuffix' => '',
+  'jsonsuffix' => '',
+  'fixedcolumns' => '',
+  'action' => 'command',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.000639s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->command[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.002977s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2024-11-20T18:15:29+08:00 ] 127.0.0.1 POST fastadmin.com/sFGucSHOMQ.php/command/command/action/command
+[运行时间：0.059583s] [吞吐率：16.78req/s] [内存消耗：4,305.00kb] [文件加载：84]
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.000024s ]
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run Closure @app_init [ RunTime:0.001475s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_init [ RunTime:0.000577s ]
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\thinkphp\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @app_dispatch [ RunTime:0.000021s ]
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'command',
+    2 => 'command',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'thinkphp_show_page_trace=0|0; fastadmin_sid=ehb5j5d85c9g; fastadmin_userinfo=%7B%22id%22%3A%2295647%22%2C%22username%22%3A%22faid_xjz2gkcpt3uubdic%22%2C%22nickname%22%3A%22%E7%97%B4%E6%83%85%E7%9A%84%E6%AF%9B%E8%A1%A3%22%2C%22token%22%3A%22c9fbb9eb-b00e-4ae2-a3bc-981bbf545d88%22%7D; thinkphp_show_page_trace=0|0; PHPSESSID=8av60nl9s6pepcetqqpgjbfisq; keeplogin=1%7C86400%7C1732179264%7Cdf2697b7f04ad6cb1cd79d4cc985f400',
+  'accept-language' => 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
+  'accept-encoding' => 'gzip, deflate',
+  'origin' => 'http://fastadmin.com',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '102',
+  'connection' => 'keep-alive',
+  'host' => 'fastadmin.com',
+)
+[ info ] [ PARAM ] array (
+  'commandtype' => 'menu',
+  'allcontroller' => '1',
+  'delete' => '0',
+  'force' => '0',
+  'controllerfile_text' => '',
+  'controllerfile' => '',
+  'action' => 'command',
+)
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\lang\zh-cn.php
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Common @module_init [ RunTime:0.001717s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LANG ] D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin/lang/zh-cn/command.php
+[ info ] [ RUN ] app\admin\controller\Command->command[ D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\controller\Command.php ]
+[ info ] [ BEHAVIOR ] Run app\admin\behavior\AdminLog @app_end [ RunTime:0.012551s ]
+[ info ] [ LOG ] INIT File

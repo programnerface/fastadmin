@@ -133,20 +133,20 @@ class DayTrade extends Backend
         return $result;
     }
 
-    public function Test(){
-        $admin_id =$this->GetAdminId();
-        $results = Db::table('fa_zelle')
-        ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_zelleorder" as source')
-        ->where([
-                'admin_id' => $admin_id,
-                'order_check'=>'审核通过'
-            ]) // 给主表查询添加条件
-        ->group('DATE(order_date)')
-        ->order('order_date', 'asc')
-        ->select();
-        var_dump($results);
-        exit;
-    }
+//    public function Test(){
+//        $admin_id =$this->GetAdminId();
+//        $results = Db::table('fa_zelle')
+//        ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_zelleorder" as source')
+//        ->where([
+//                'admin_id' => $admin_id,
+//                'order_check'=>'审核通过'
+//            ]) // 给主表查询添加条件
+//        ->group('DATE(order_date)')
+//        ->order('order_date', 'asc')
+//        ->select();
+//        var_dump($results);
+//        exit;
+//    }
     //获取当前用户的订单数据
     public function getOrderDataById()
     {

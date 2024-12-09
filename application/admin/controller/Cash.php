@@ -3,6 +3,9 @@
 namespace app\admin\controller;
 
 use app\common\controller\Backend;
+use think\Db;
+use think\exception\PDOException;
+use think\exception\ValidateException;
 
 /**
  * 
@@ -25,7 +28,7 @@ class Cash extends Backend
         $this->view->assign("orderStatusList", $this->model->getOrderStatusList());
         $this->view->assign("orderCheckList", $this->model->getOrderCheckList());
         $this->assignconfig('isSuperAdmin',$this->auth->isSuperAdmin());
-        $this->assignconfig('merchant_name',$this->auth->check('zelle/merchant_name'));
+        $this->assignconfig('merchant_name',$this->groupcheck());
     }
 
 
@@ -60,11 +63,14 @@ class Cash extends Backend
                     ->paginate($limit);
 
             foreach ($list as $row) {
-                
                 $row->getRelation('admin')->visible(['username']);
-				$row->getRelation('type')->visible(['name']);
-				$row->getRelation('country')->visible(['name']);
-				$row->getRelation('zone')->visible(['name']);
+                $row->getRelation('admin')->visible(['zelle_fees']);
+                $row->getRelation('admin')->visible(['cash_fees']);
+                $row->getRelation('admin')->visible(['venmo_fees']);
+                $row->getRelation('admin')->visible(['square_fees']);
+                $row->getRelation('type')->visible(['name']);
+                $row->getRelation('country')->visible(['name']);
+                $row->getRelation('zone')->visible(['name']);
             }
 
             $result = array("total" => $list->total(), "rows" => $list->items());
@@ -73,5 +79,99 @@ class Cash extends Backend
         }
         return $this->view->fetch();
     }
+    public function groupcheck(){
+        //
+
+        $admin_id = $this->auth->id;
+        $groupName=$this->auth->getGroups($admin_id);
+        $groupName = array_column($groupName, 'name');
+        $groupName =$groupName[0];
+        if ($groupName == '商户'){
+            return false;
+        }else{
+            return true;
+        }
+
+    }
+    public function add()
+    {
+        if (false === $this->request->isPost()) {
+            return $this->view->fetch();
+        }
+        $cash_fees =Db::name('admin')->where('id',$this->auth->id)->field('cash_fees')->find();
+        $params = $this->request->post('row/a');
+        $params['fees'] =$cash_fees['cash_fees'];
+        $params['amount'] =$params['price']*(1-$params['fees']);
+        if (empty($params)) {
+            $this->error(__('Parameter %s can not be empty', ''));
+        }
+        $params = $this->preExcludeFields($params);
+
+        if ($this->dataLimit && $this->dataLimitFieldAutoFill) {
+            $params[$this->dataLimitField] = $this->auth->id;
+        }
+        $result = false;
+        Db::startTrans();
+        try {
+            //是否采用模型验证
+            if ($this->modelValidate) {
+                $name = str_replace("\\model\\", "\\validate\\", get_class($this->model));
+                $validate = is_bool($this->modelValidate) ? ($this->modelSceneValidate ? $name . '.add' : $name) : $this->modelValidate;
+                $this->model->validateFailException()->validate($validate);
+            }
+            $result = $this->model->allowField(true)->save($params);
+            Db::commit();
+        } catch (ValidateException|PDOException|Exception $e) {
+            Db::rollback();
+            $this->error($e->getMessage());
+        }
+        if ($result === false) {
+            $this->error(__('No rows were inserted'));
+        }
+        $this->success();
+    }
+    public function edit($ids = null){
+        $row = $this->model->get($ids);
+        if (!$row) {
+            $this->error(__('No Results were found'));
+        }
+        $adminIds = $this->getDataLimitAdminIds();
+        if (is_array($adminIds) && !in_array($row[$this->dataLimitField], $adminIds)) {
+            $this->error(__('You have no permission'));
+        }
+        if (false === $this->request->isPost()) {
+            $this->view->assign('row', $row);
+            return $this->view->fetch();
+        }
+//        $zelle_fees =Db::name('admin')->where('id',$this->auth->id)->field('zelle_fees')->find();
+        $params = $this->request->post('row/a');
+//        $params['fees'] =$zelle_fees['zelle_fees'];
+        $params['amount'] =$params['price']*(1-$params['fees']);
+
+        if (empty($params)) {
+            $this->error(__('Parameter %s can not be empty', ''));
+        }
+        $params = $this->preExcludeFields($params);
+        $result = false;
+        Db::startTrans();
+        try {
+            //是否采用模型验证
+            if ($this->modelValidate) {
+                $name = str_replace("\\model\\", "\\validate\\", get_class($this->model));
+                $validate = is_bool($this->modelValidate) ? ($this->modelSceneValidate ? $name . '.edit' : $name) : $this->modelValidate;
+                $row->validateFailException()->validate($validate);
+            }
+            $result = $row->allowField(true)->save($params);
+            Db::commit();
+        } catch (ValidateException|PDOException|Exception $e) {
+            Db::rollback();
+            $this->error($e->getMessage());
+        }
+        if (false === $result) {
+            $this->error(__('No rows were updated'));
+        }
+        $this->success();
+    }
 
 }
+

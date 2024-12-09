@@ -1,0 +1,8 @@
+post数据{"__token__":"fc822eff405a3071dbd3374a680c5470","email":"ceshi021@gmail.com","username":"ceshi021","password":"123456789","mobile":"13652985467","captcha":"zawc"}用户名ceshi021
+密码123456789
+post数据{"__token__":"8bdd779b2b7b4fdbc4f1b1db742ac77d","email":"ceshi022@gmail.com","username":"ceshi022","password":"258465875","mobile":"13205988659","captcha":"nyzp"}用户名ceshi022
+密码258465875
+post数据{"__token__":"5d15009c033822f402a5be62bdafbc40","email":"ceshi022@gmail.com","username":"ceshi022","password":"254621869","mobile":"13205036251","captcha":"anth"}用户名ceshi022
+密码254621869
+post数据{"__token__":"d4b4759be512c9c05ec5a5683d53c006","email":"ceshi023@gmail.com","username":"ceshi023","password":"1234526522","mobile":"13202521324","captcha":"ky25"}用户名ceshi023
+密码1234526522

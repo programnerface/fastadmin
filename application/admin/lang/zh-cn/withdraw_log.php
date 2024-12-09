@@ -6,5 +6,8 @@ return [
     'Withdrawal_usamount' => '提现金额($)',
     'Withdrawal_cnamount' => '提现金额(￥)',
     'Withdrawal_way'      => '渠道',
-    'Withdrawal_img'      => '截图'
+    'Withdrawal_img'      => '截图',
+    'Withdrawal_status'   => '提现状态',
+    'Withdrawal_check'    => '提现审核',
+    'Admin.username'      => '用户名'
 ];

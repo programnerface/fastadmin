@@ -12,11 +12,13 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                     multi_url: 'zelle/multi',
                     import_url: 'zelle/import',
                     table: 'zelle',
+
                 }
             });
 
             var table = $("#table");
             var name = Config.merchant_name;
+            var issuper =Config.isSuperAdmin;
             // 初始化表格
             table.bootstrapTable({
                 url: $.fn.bootstrapTable.defaults.extend.index_url,
@@ -29,10 +31,11 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 showToggle: name,
                 commonSearch: name,
                 showColumns: name,
+                // escape:false,
                 columns: [
                     [
                         {checkbox: true},
-                        {field: 'ID', title: __('ID')},
+                        {field: 'ID', title: __('ID'),visible: issuper,},
                         {field: 'merchant_name', title: __('Merchant_name'),visible: name,operate: 'LIKE', table: table, class: 'autocontent', formatter: function (value, row, index) {
                                 value =row.admin.username
                                 return value
@@ -54,28 +57,38 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'payment_address', title: __('Payment_address'), operate: 'LIKE', table: table, class: 'autocontent', formatter: Table.api.formatter.content},
                         {field: 'payment_address2', title: __('Payment_address2'), operate: 'LIKE', table: table, class: 'autocontent', formatter: Table.api.formatter.content},
                         {field: 'confirm_code', title: __('Confirm_code'), operate: 'LIKE'},
+                        {field: 'shipping_name', title: __('收货人'), operate: 'LIKE', table: table, class: 'autocontent', visible: name,formatter: Table.api.formatter.content},
                         {field: 'fees', title: __('Fees'), operate:'BETWEEN',formatter: function (value, row, index) {
-                            if(value == null){
-                                value = row.admin.zelle_fees
-                            }else{
-                                value = value
-                            }
+                                if(value == null){
+                                    value = row.admin.cash_fees
+                                }else{
+                                    value = value
+                                }
                                 value=(value * 100).toFixed(2) + '%'
                                 return value;
                             }},
                         {field: 'amount', title: __('Amount'), operate:'BETWEEN',formatter: function (value, row, index) {
-                                value =row.price*(1-row.fees)
+
                                 return "$"+value
                             }},
-                        {field: 'payment_img', title: __('Payment_img'), operate: 'LIKE', table: table, class: 'autocontent', formatter: Table.api.formatter.content},
+                        {field: 'payment_img', title: __('Payment_img'), operate: 'LIKE', table: table, class: 'autocontent', formatter: Table.api.formatter.image},
                         {field: 'waybill_num', title: __('Waybill_num'), operate: 'LIKE'},
+                        {field: 'vendor_invoice', title: __('发票'), operate: 'LIKE', table: table,  class: 'autocontent', visible: name,formatter:function (value, row, index){
+
+                              if (!value){
+                                  return ''
+                              }else{
+                                  value = Fast.api.escape(value);
+                                  return '<a href="'+value+'">'+'发票'+'</a>'
+                              }
+                            }},
                         {field: 'order_status', title: __('Order_status'), searchList: {"未确认":__('未确认'),"已入账":__('已入账'),"已发货":__('已发货')}, custom:{"未确认":'danger'},formatter: Table.api.formatter.status},
                         {field: 'order_check', title: __('Order_check'), searchList: {"待审核":__('待审核'),"审核通过":__('审核通过')},custom:{"待审核":'danger'}, formatter: Table.api.formatter.normal},
                         // {field: 'admin_id', title: __('Admin_id')},
                         // {field: 'admin.username', title: __('Admin.username'), operate: 'LIKE'},
                         // {field: 'admin.zelle_fees', title: __('Admin.username'), operate: 'LIKE'},
 
-                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate}
+                        {field: 'operate', title: __('Operate'), table: table, events: Table.api.events.operate, formatter: Table.api.formatter.operate,visible: issuper,}
                     ]
                 ]
             });
@@ -83,12 +96,19 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
             // 为表格绑定事件
             Table.api.bindevent(table);
         },
+
         add: function () {
             if (!Config.isSuperAdmin){
                 $('#merchant_name').hide();
                 $('#order_date').hide();
                 $('#fees').hide();
                 $('#amount').hide();
+                $('#order_status').hide();
+                $('#order_check').hide();
+            }
+            if(!Config.merchant_name){
+                $('#vendor_invoice').hide();
+                $('#shipping_name').hide();
             }
             Controller.api.bindevent();
         },
@@ -98,6 +118,12 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 $('#order_date').hide();
                 $('#fees').hide();
                 $('#amount').hide();
+                $('#order_status').hide();
+                $('#order_check').hide();
+            }
+            if(!Config.merchant_name){
+                $('#vendor_invoice').hide();
+                $('#shipping_name').hide();
             }
             Controller.api.bindevent();
         },
