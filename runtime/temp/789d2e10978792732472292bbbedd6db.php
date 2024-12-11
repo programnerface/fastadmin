@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:91:"D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\zelle\index.html";i:1733480586;s:84:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\layout\default.html";i:1732090683;s:81:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\meta.html";i:1732090683;s:83:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\script.html";i:1732090683;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:91:"D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\zelle\index.html";i:1733800967;s:84:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\layout\default.html";i:1732090683;s:81:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\meta.html";i:1732090683;s:83:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\script.html";i:1732090683;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -69,6 +69,11 @@
                     <div id="toolbar" class="toolbar">
                         <a href="javascript:;" class="btn btn-primary btn-refresh" title="<?php echo __('Refresh'); ?>" ><i class="fa fa-refresh"></i> </a>
                         <a href="javascript:;" class="btn btn-success btn-add <?php echo $auth->check('zelle/add')?'':'hide'; ?>" title="<?php echo __('Add'); ?>" ><i class="fa fa-plus"></i> <?php echo __('Add'); ?></a>
+                        <a href="javascript:;" class="btn btn-success btn-venderadd <?php echo $auth->check('zelle/venderadd')?'':'hide'; ?>"  ><i class="fa fa-plus"></i> 供应商添加</a>
+                        <a href="javascript:;" class="btn btn-success btn-venderedit btn-disabled disabled <?php echo $auth->check('zelle/venderedit')?'':'hide'; ?>" title="<?php echo __('Edit'); ?>" ><i class="fa fa-pencil"></i> 供应商编辑</a>
+                        <a href="javascript:;" class="btn btn-success btn-merchantadd <?php echo $auth->check('zelle/merchantadd')?'':'hide'; ?>"  ><i class="fa fa-plus"></i> 商户添加</a>
+                        <a href="javascript:;" class="btn btn-success btn-merchantedit btn-disabled disabled <?php echo $auth->check('zelle/merchantedit')?'':'hide'; ?>" title="<?php echo __('Edit'); ?>" ><i class="fa fa-pencil"></i>商户编辑</a>
+                        <a href="javascript:;" class="btn btn-danger btn-import <?php echo $auth->check('zelle/import')?'':'hide'; ?>" title="<?php echo __('Import'); ?>" id="btn-import-file" data-url="ajax/upload" data-mimetype="csv,xls,xlsx" data-multiple="false"><i class="fa fa-upload"></i> <?php echo __('Import'); ?></a>
                         <a href="javascript:;" class="btn btn-success btn-edit btn-disabled disabled <?php echo $auth->check('zelle/edit')?'':'hide'; ?>" title="<?php echo __('Edit'); ?>" ><i class="fa fa-pencil"></i> <?php echo __('Edit'); ?></a>
                         <a href="javascript:;" class="btn btn-danger btn-del btn-disabled disabled <?php echo $auth->check('zelle/del')?'':'hide'; ?>" title="<?php echo __('Delete'); ?>" ><i class="fa fa-trash"></i> <?php echo __('Delete'); ?></a>
                         

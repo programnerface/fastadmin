@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:90:"D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\zelle\edit.html";i:1733715803;s:84:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\layout\default.html";i:1732090683;s:81:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\meta.html";i:1732090683;s:83:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\script.html";i:1732090683;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:90:"D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\zelle\edit.html";i:1733809370;s:84:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\layout\default.html";i:1732090683;s:81:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\meta.html";i:1732090683;s:83:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\script.html";i:1732090683;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -61,12 +61,12 @@
                             <div class="content">
                                 <form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
 
-    <div class="form-group" id="merchant_name">
-        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Merchant_name'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
-            <input id="c-merchant_name" class="form-control" name="row[merchant_name]" type="text" value="<?php echo htmlentities($row['merchant_name'] ?? ''); ?>">
-        </div>
-    </div>
+<!--    <div class="form-group" id="merchant_name">-->
+<!--        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Merchant_name'); ?>:</label>-->
+<!--        <div class="col-xs-12 col-sm-8">-->
+<!--            <input id="c-merchant_name" class="form-control" name="row[merchant_name]" type="text" value="<?php echo htmlentities($row['merchant_name'] ?? ''); ?>">-->
+<!--        </div>-->
+<!--    </div>-->
     <div class="form-group" >
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Order_num'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
@@ -87,8 +87,12 @@
     </div>
     <div class="form-group">
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Product_type_ids'); ?>:</label>
-        <div class="col-xs-12 col-sm-8">
+        <div class="col-xs-12 col-sm-4">
             <input id="c-product_type_ids" data-rule="required" data-source="product_type/index"  class="form-control selectpage" name="row[product_type_ids]" type="text" value="<?php echo htmlentities($row['product_type_ids'] ?? ''); ?>">
+        </div>
+        <label class="control-label col-xs-12 col-sm-1"><?php echo __('数量'); ?>:</label>
+        <div class="col-xs-12 col-sm-3">
+            <input id="c-quantity" data-rule="required" class="form-control " name="row[quantity]" type="text" value="">
         </div>
     </div>
     <div class="form-group">
@@ -125,6 +129,12 @@
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Payment_address2'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <input id="c-payment_address2" class="form-control" name="row[payment_address2]" type="text" value="<?php echo htmlentities($row['payment_address2'] ?? ''); ?>">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2"><?php echo __('Postcode'); ?>:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-postcode" class="form-control" name="row[postcode]" type="text">
         </div>
     </div>
     <div class="form-group">
@@ -165,7 +175,7 @@
             <ul class="row list-inline faupload-preview" id="p-payment_img"></ul>
         </div>
     </div>
-    <div class="form-group" style="display: none">
+    <div class="form-group" >
         <label class="control-label col-xs-12 col-sm-2"><?php echo __('Waybill_num'); ?>:</label>
         <div class="col-xs-12 col-sm-8">
             <input id="c-waybill_num" class="form-control" name="row[waybill_num]" type="text" value="<?php echo htmlentities($row['waybill_num'] ?? ''); ?>">

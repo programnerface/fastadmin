@@ -24,6 +24,15 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                         return !isNaN($(cell).text()) ? '\\@' : '';
                     },
                 },
+                onCellHtmlData:function($cell, row, col, htmlContent){
+                    function stripHtmlTags(htmlString) {
+                        var tempDiv = document.createElement("div");
+                        tempDiv.innerHTML = htmlString;
+                        return tempDiv.textContent || tempDiv.innerText || "";
+                    }
+                    return stripHtmlTags(htmlContent);
+                },
+
                 ignoreColumn: [0, 'operate'] //默认不导出第一列(checkbox)与操作(operate)列
             },
             pageSize: Config.pagesize || localStorage.getItem("pagesize") || 10,
@@ -59,7 +68,12 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                 del_url: '',
                 import_url: '',
                 multi_url: '',
+                venderadd: '', //todo
+                venderedit: '',
+                merchantadd: '',
+                merchantedit: '',//toend
                 dragsort_url: 'ajax/weigh',
+
             }
         },
         // Bootstrap-table 列配置
@@ -72,6 +86,10 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
             toolbar: '.toolbar',
             refreshbtn: '.btn-refresh',
             addbtn: '.btn-add',
+            venderaddbtn: '.btn-venderadd',  //todo
+            vendereditbtn: '.btn-venderedit',
+            merchantaddbtn: '.btn-merchantadd',
+            merchanteditbtn: '.btn-merchantedit', //toend
             editbtn: '.btn-edit',
             delbtn: '.btn-del',
             importbtn: '.btn-import',
@@ -384,6 +402,61 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                     }
                     Fast.api.open(url, $(this).data("original-title") || $(this).attr("title") || __('Add'), $(this).data() || {});
                 });
+                // 供应啥添加 添加按钮事件 todo
+                toolbar.on('click', Table.config.venderaddbtn, function () {
+                    var ids = Table.api.selectedids(table);
+                    var url = options.extend.venderadd_url;
+                    if (url.indexOf("{ids}") !== -1) {
+                        url = Table.api.replaceurl(url, {ids: ids.length > 0 ? ids.join(",") : 0}, table);
+                    }
+                    Fast.api.open(url, $(this).data("original-title") || $(this).attr("title") || __('Add'), $(this).data() || {});
+                });
+                //商户添加
+                toolbar.on('click', Table.config.merchantaddbtn, function () {
+                    var ids = Table.api.selectedids(table);
+                    var url = options.extend.merchantadd_url;
+                    if (url.indexOf("{ids}") !== -1) {
+                        url = Table.api.replaceurl(url, {ids: ids.length > 0 ? ids.join(",") : 0}, table);
+                    }
+                    Fast.api.open(url, $(this).data("original-title") || $(this).attr("title") || __('Add'), $(this).data() || {});
+                });
+                //  供应商编辑 批量编辑按钮事件
+                toolbar.on('click', Table.config.vendereditbtn, function () {
+                    var that = this;
+                    var ids = Table.api.selectedids(table);
+                    if (ids.length > 10) {
+                        return;
+                    }
+                    var title = $(that).data('title') || $(that).attr("title") || __('Edit');
+                    var data = $(that).data() || {};
+                    delete data.title;
+                    //循环弹出多个编辑框
+                    $.each(Table.api.selecteddata(table), function (index, row) {
+                        var url = options.extend.venderedit_url;
+                        row = $.extend({}, row ? row : {}, {ids: row[options.pk]});
+                        url = Table.api.replaceurl(url, row, table);
+                        Fast.api.open(url, typeof title === 'function' ? title.call(table, row) : title, data);
+                    });
+                });
+                //  商户编辑 批量编辑按钮事件
+                toolbar.on('click', Table.config.merchanteditbtn, function () {
+                    var that = this;
+                    var ids = Table.api.selectedids(table);
+                    if (ids.length > 10) {
+                        return;
+                    }
+                    var title = $(that).data('title') || $(that).attr("title") || __('Edit');
+                    var data = $(that).data() || {};
+                    delete data.title;
+                    //循环弹出多个编辑框
+                    $.each(Table.api.selecteddata(table), function (index, row) {
+                        var url = options.extend.merchantedit_url;
+                        row = $.extend({}, row ? row : {}, {ids: row[options.pk]});
+                        url = Table.api.replaceurl(url, row, table);
+                        Fast.api.open(url, typeof title === 'function' ? title.call(table, row) : title, data);
+                    });
+                });
+                // toend
                 // 导入按钮事件
                 if ($(Table.config.importbtn, toolbar).length > 0) {
                     require(['upload'], function (Upload) {

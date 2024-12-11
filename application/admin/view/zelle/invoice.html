@@ -84,21 +84,26 @@
 <div class="invoice-container">
     <div class="header">
         <h1>Invoice</h1>
-        <p>Invoice Number: #12345678</p>
+        <p>Invoice Number: {$data.order_num|htmlentities}</p>
+        <p>{$data.order_date|htmlentities}</p>
     </div>
 
     <div class="details">
         <div class="left">
             <h2>Billing Information</h2>
-            <p>Name: John Hann</p>
-            <p>Address: 2104 w hwy 150, Lincolnton, NC 28092</p>
-            <p>Email: johndoe@example.com</p>
+            <p>{$data.payer|htmlentities}</p>
+            <p>{$data.Payment_address|htmlentities}</p>
+            <p>{$data.city|htmlentities}</p>
+            <p>{$data.country_name|htmlentities}</p>
+<!--            <p>Email: johndoe@example.com</p>-->
         </div>
         <div class="right">
             <h2>Shipping Information</h2>
-            <p>Name: John Hann</p>
-            <p>Address: 2104 w hwy 150, Lincolnton, NC 28092</p>
-            <p>Email: johndoe@example.com</p>
+            <p>{$data.shipping_name|htmlentities}</p>
+            <p>{$data.Payment_address|htmlentities}</p>
+            <p>{$data.city|htmlentities}</p>
+            <p>{$data.country_name|htmlentities}</p>
+<!--            <p>Email: johndoe@example.com</p>-->
         </div>
 
     </div>
@@ -115,35 +120,35 @@
         </thead>
         <tbody>
         <tr>
-            <td>Custom Shoes</td>
-            <td>1</td>
-            <td>$256.00</td>
-            <td>$256.00</td>
+            <td>Custom {$data.productname|htmlentities}</td>
+            <td>{$data.quantity|htmlentities}</td>
+            <td>${$data.u_price|htmlentities}</td>
+            <td>${$data.price|htmlentities}</td>
         </tr>
 
         </tbody>
         <tfoot>
         <tr>
             <td colspan="3" style="text-align: right;">Subtotal</td>
-            <td>$256.00</td>
+            <td>${$data.price|htmlentities}</td>
         </tr>
         <tr>
             <td colspan="3" style="text-align: right;">Shipping Fee</td>
-            <td>$0.00</td>
+            <td>${$data.fees|htmlentities}</td>
         </tr>
         <tr>
             <td colspan="3" style="text-align: right;">Total</td>
-            <td>$256.00</td>
+            <td>${$data.amount|htmlentities}</td>
         </tr>
 
         </tfoot>
     </table>
-    <p>Shipping Method: FedEx</p>
-    <p>Tracking Number: <a href="https://t.17track.net/en#nums=279247052732" target="_blank">279247052732</a></p>
+<!--    <p>Shipping Method: FedEx</p>-->
+    <p>Tracking Number: <a href="https://t.17track.net/en#nums={$data.waybill_num|htmlentities}" target="_blank">{$data.waybill_num|htmlentities}</a></p>
 
     <div class="footer">
         <p>Thank you for your purchase!</p>
-        <p>For any inquiries, please contact us at support@example.com</p>
+        <p>For any inquiries, please contact us at {$data.email|htmlentities}</p>
     </div>
 </div>
 

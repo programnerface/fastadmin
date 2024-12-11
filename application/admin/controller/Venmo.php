@@ -21,6 +21,7 @@ class Venmo extends Backend
      */
     protected $model = null;
     protected $dataLimit = 'personal';
+    protected $noNeedRight =['invoice'];
     public function _initialize()
     {
         parent::_initialize();
@@ -97,7 +98,11 @@ class Venmo extends Backend
         }
         $venmo_fees =Db::name('admin')->where('id',$this->auth->id)->field('venmo_fees')->find();
         $params = $this->request->post('row/a');
-        $params['fees'] =$venmo_fees['venmo_fees'];
+        if(empty($params['fees'])){
+            $params['fees'] =$venmo_fees['venmo_fees'];
+        }else{
+            $params['fees'] =$params['fees'];
+        }
         $params['amount'] =$params['price']*(1-$params['fees']);
         if (empty($params)) {
             $this->error(__('Parameter %s can not be empty', ''));
@@ -140,9 +145,13 @@ class Venmo extends Backend
             $this->view->assign('row', $row);
             return $this->view->fetch();
         }
-//        $zelle_fees =Db::name('admin')->where('id',$this->auth->id)->field('zelle_fees')->find();
+       $venmo_fees =Db::name('admin')->where('id',$this->auth->id)->field('venmo_fees')->find();
         $params = $this->request->post('row/a');
-//        $params['fees'] =$zelle_fees['zelle_fees'];
+        if(empty($params['fees'])){
+            $params['fees'] =$venmo_fees['venmo_fees'];
+        }else{
+            $params['fees'] =$params['fees'];
+        }
         $params['amount'] =$params['price']*(1-$params['fees']);
 
         if (empty($params)) {
@@ -168,6 +177,236 @@ class Venmo extends Backend
             $this->error(__('No rows were updated'));
         }
         $this->success();
+    }
+    public function venderadd()
+    {
+        if (false === $this->request->isPost()) {
+            return $this->view->fetch();
+        }
+        $venmo_fees =Db::name('admin')->where('id',$this->auth->id)->field('venmo_fees')->find();
+        $params = $this->request->post('row/a');
+
+        if(empty($params['fees'])){
+            $params['fees'] =$venmo_fees['venmo_fees'];
+        }else{
+            $params['fees'] =$params['fees'];
+        }
+        $params['amount'] =$params['price']*(1-$params['fees']);
+        $params['u_price'] =$params['price']/$params['quantity'];//单价
+        if (empty($params)) {
+            $this->error(__('Parameter %s can not be empty', ''));
+        }
+        $params = $this->preExcludeFields($params);
+
+        if ($this->dataLimit && $this->dataLimitFieldAutoFill) {
+            $params[$this->dataLimitField] = $this->auth->id;
+        }
+        $result = false;
+        Db::startTrans();
+        try {
+            //是否采用模型验证
+            if ($this->modelValidate) {
+                $name = str_replace("\\model\\", "\\validate\\", get_class($this->model));
+                $validate = is_bool($this->modelValidate) ? ($this->modelSceneValidate ? $name . '.vendoradd' : $name) : $this->modelValidate;
+                $this->model->validateFailException()->validate($validate);
+            }
+            $result = $this->model->allowField(true)->save($params);
+            Db::commit();
+        } catch (ValidateException|PDOException|Exception $e) {
+            Db::rollback();
+            $this->error($e->getMessage());
+        }
+        if ($result === false) {
+            $this->error(__('No rows were inserted'));
+        }
+        $this->success();
+    }
+    public function merchantadd()
+    {
+        if (false === $this->request->isPost()) {
+            return $this->view->fetch();
+        }
+        $venmo_fees =Db::name('admin')->where('id',$this->auth->id)->field('venmo_fees')->find();
+        $params = $this->request->post('row/a');
+        $params['order_date']=date('Y-m-d');
+
+        if(empty($params['fees'])){
+            $params['fees'] =$venmo_fees['venmo_fees'];
+        }else{
+            $params['fees'] =$params['fees'];
+        }
+        $params['amount'] =$params['price']*(1-$params['fees']);//应结算
+        $params['u_price'] =$params['price']/$params['quantity'];//单价
+        if (empty($params)) {
+            $this->error(__('Parameter %s can not be empty', ''));
+        }
+
+        $params = $this->preExcludeFields($params);
+
+        if ($this->dataLimit && $this->dataLimitFieldAutoFill) {
+            $params[$this->dataLimitField] = $this->auth->id;
+        }
+        $result = false;
+        Db::startTrans();
+        try {
+            //是否采用模型验证
+            if ($this->modelValidate) {
+                $name = str_replace("\\model\\", "\\validate\\", get_class($this->model));
+                $validate = is_bool($this->modelValidate) ? ($this->modelSceneValidate ? $name . '.vendoradd' : $name) : $this->modelValidate;
+                $this->model->validateFailException()->validate($validate);
+            }
+            $result = $this->model->allowField(true)->save($params);
+            Db::commit();
+        } catch (ValidateException|PDOException|Exception $e) {
+            Db::rollback();
+            $this->error($e->getMessage());
+        }
+        if ($result === false) {
+            $this->error(__('No rows were inserted'));
+        }
+        $this->success();
+    }
+    public function venderedit($ids = null){
+        $row = $this->model->get($ids);
+        if (!$row) {
+            $this->error(__('No Results were found'));
+        }
+        $adminIds = $this->getDataLimitAdminIds();
+        if (is_array($adminIds) && !in_array($row[$this->dataLimitField], $adminIds)) {
+            $this->error(__('You have no permission'));
+        }
+        if (false === $this->request->isPost()) {
+            $this->view->assign('row', $row);
+            return $this->view->fetch();
+        }
+        $venmo_fees =Db::name('admin')->where('id',$this->auth->id)->field('venmo_fees')->find();
+        $params = $this->request->post('row/a');
+        if(empty($params['fees'])){
+            $params['fees'] =$venmo_fees['venmo_fees'];
+        }else{
+            $params['fees'] =$params['fees'];
+        }
+        $params['amount'] =$params['price']*(1-$params['fees']);
+        $params['u_price'] =$params['price']/$params['quantity'];//单价
+
+        if (empty($params)) {
+            $this->error(__('Parameter %s can not be empty', ''));
+        }
+        $params = $this->preExcludeFields($params);
+        $result = false;
+        Db::startTrans();
+        try {
+            //是否采用模型验证
+            if ($this->modelValidate) {
+                $name = str_replace("\\model\\", "\\validate\\", get_class($this->model));
+                $validate = is_bool($this->modelValidate) ? ($this->modelSceneValidate ? $name . '.edit' : $name) : $this->modelValidate;
+                $row->validateFailException()->validate($validate);
+            }
+            $result = $row->allowField(true)->save($params);
+            Db::commit();
+        } catch (ValidateException|PDOException|Exception $e) {
+            Db::rollback();
+            $this->error($e->getMessage());
+        }
+        if (false === $result) {
+            $this->error(__('No rows were updated'));
+        }
+        $this->success();
+    }
+    public function merchantedit($ids = null){
+        $row = $this->model->get($ids);
+        if (!$row) {
+            $this->error(__('No Results were found'));
+        }
+        $adminIds = $this->getDataLimitAdminIds();
+        if (is_array($adminIds) && !in_array($row[$this->dataLimitField], $adminIds)) {
+            $this->error(__('You have no permission'));
+        }
+        if (false === $this->request->isPost()) {
+            $this->view->assign('row', $row);
+            return $this->view->fetch();
+        }
+        $venmo_fees =Db::name('admin')->where('id',$this->auth->id)->field('venmo_fees')->find();
+        $params = $this->request->post('row/a');
+        if(empty($params['fees'])){
+            $params['fees'] =$venmo_fees['venmo_fees'];
+        }else{
+            $params['fees'] =$params['fees'];
+        }
+        $params['amount'] =$params['price']*(1-$params['fees']);
+        $params['u_price'] =$params['price']/$params['quantity'];//单价
+        if (empty($params)) {
+            $this->error(__('Parameter %s can not be empty', ''));
+        }
+        $params = $this->preExcludeFields($params);
+        $result = false;
+        Db::startTrans();
+        try {
+            //是否采用模型验证
+            if ($this->modelValidate) {
+                $name = str_replace("\\model\\", "\\validate\\", get_class($this->model));
+                $validate = is_bool($this->modelValidate) ? ($this->modelSceneValidate ? $name . '.edit' : $name) : $this->modelValidate;
+                $row->validateFailException()->validate($validate);
+            }
+            $result = $row->allowField(true)->save($params);
+            Db::commit();
+        } catch (ValidateException|PDOException|Exception $e) {
+            Db::rollback();
+            $this->error($e->getMessage());
+        }
+        if (false === $result) {
+            $this->error(__('No rows were updated'));
+        }
+        $this->success();
+    }
+    public function invoice($order_num)
+    {
+        $table = $this->model->getTable();
+        $query = Db::table($table)->where('order_num',$order_num)->select();
+
+        $data =[];
+        if (empty($query)) {
+            return "订单号不存在！";
+        }else {
+            foreach ($query as $data) {
+            }
+        }
+
+        if ($data['country_id']){
+            $country = Db::table('fa_country')->field('name')->where('country_id',$data['country_id'])->value('name');
+        }
+        if ($data['zone_id']){
+            $zone_name = Db::table('fa_zone')->field('code')->where('zone_id',$data['zone_id'])->value('code');
+        }
+        if($data['product_type_ids']){
+            $productname = Db::table('fa_product_type')->field('name')->where('id',$data['product_type_ids'])->value('name');
+        }
+        $email=Db::table('fa_admin')->where('id',$data['admin_id'])->value('email');
+//        var_dump($data);
+//        exit();
+
+        $data =[
+            'order_date'=>$data['order_date'],
+            'order_num' => $data['order_num'],
+            'payer' =>'Name: '.$data['payer'],
+            'Payment_address' =>'Address: '.$data['payment_address'],
+            'Payment_address2' =>'Address: '.$data['payment_address2'],
+            'country_name' =>'Country: '. $country,
+            'city' =>$data['city'].' '.$zone_name.' '.$data['postcode'],
+            'shipping_name' =>'Name: '.$data['shipping_name'],
+            'productname'=>$productname,
+            'quantity' =>$data['quantity'],
+            'u_price' =>$data['u_price'],
+            'price' =>$data['price'],
+            'fees' =>($data['price']-$data['amount']),
+            'amount' =>$data['amount'],
+            'waybill_num' =>$data['waybill_num'],
+            'email' =>$email,
+        ];
+        // 通过 assign 方法传递数据
+        $this->view->assign('data', $data);
+
+        return $this->view->fetch('venmo/invoice');
     }
 
 }

@@ -26,10 +26,10 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                 fixedColumns: true,
                 fixedRightNumber: 1,
                 sortOrder: 'asc',
-                showExport: name,
-                showToggle: name,
-                commonSearch: name,
-                showColumns: name,
+                showExport: issuper,
+                showToggle: issuper,
+                commonSearch: issuper,
+                showColumns: issuper,
                 columns: [
                     [
                         {checkbox: true},
