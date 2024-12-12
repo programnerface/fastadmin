@@ -26,7 +26,7 @@ class Menu extends Command
             ->addOption('delete', 'd', Option::VALUE_OPTIONAL, 'delete the specified menu', '')
             ->addOption('force', 'f', Option::VALUE_OPTIONAL, 'force delete menu,without tips', null)
             ->addOption('equal', 'e', Option::VALUE_OPTIONAL, 'the controller must be equal', null)
-            ->setDescription('Build auth menu from controller');
+            ->setDescription('Build zauth menu from controller');
         //要执行的controller必须一样，不适用模糊查询
     }
 

@@ -2,7 +2,12 @@
 
 namespace app\admin\controller;
 
+use app\admin\library\Auth;
 use app\common\controller\Backend;
+use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
+use PhpOffice\PhpSpreadsheet\Reader\Csv;
+use PhpOffice\PhpSpreadsheet\Reader\Xls;
+use PhpOffice\PhpSpreadsheet\Reader\Xlsx;
 use think\Db;
 use think\exception\PDOException;
 use think\exception\ValidateException;
@@ -20,6 +25,7 @@ class Zelle extends Backend
      * @var \app\admin\model\Zelle
      */
     protected $model = null;
+//    protected $dataLimit = 'personal';
     protected $dataLimit = 'auth';
     protected $noNeedRight =['invoice'];
     public function _initialize()
@@ -28,9 +34,14 @@ class Zelle extends Backend
         $this->model = new \app\admin\model\Zelle;
         $this->view->assign("orderStatusList", $this->model->getOrderStatusList());
         $this->view->assign("orderCheckList", $this->model->getOrderCheckList());
-        $this->assignconfig('isSuperAdmin',$this->auth->isSuperAdmin());
-        $this->assignconfig('merchant_name',$this->groupcheck());
-
+        $this->assignconfig('isSuperAdmin',$this->auth->isSuperAdmin());//管理员
+        $this->assignconfig('merchant_name',$this->groupcheck()); //供应商管理员
+        $this->view->assign('style', $this->merstyle());
+//        $this->css();
+        $this->view->assign('adminstyle', $this->adminstyle());
+//        $this->venzelle();
+//var_dump($this->venzelle());
+//exit;
     }
 
 
@@ -49,6 +60,7 @@ class Zelle extends Backend
     {
         //当前是否为关联查询
         $this->relationSearch = true;
+        $dataLimit = 'auth';
         //设置过滤方法
         $this->request->filter(['strip_tags', 'trim']);
         if ($this->request->isAjax()) {
@@ -57,12 +69,38 @@ class Zelle extends Backend
                 return $this->selectpage();
             }
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
-
-            $list = $this->model
+            $admin_id = $this->auth->id;
+            $groupName=$this->auth->getGroups($admin_id);
+            $groupName = array_column($groupName, 'name');
+            $group_text=$groupName[0] ?? null;;
+            if($this->auth->isSuperAdmin() || $group_text  == '商户'){
+                $list = $this->model
                     ->with(['admin','type','country','zone'])
                     ->where($where)
                     ->order($sort, $order)
                     ->paginate($limit);
+            }else{
+
+                $query = Db::table('fa_mer_ven')->field('account')->where('ven_id',$this->auth->id)->select();
+//var_dump($query);
+//exit;
+                foreach ($query as $data) {
+                    $account = $data['account'];
+                }
+                $list = $this->model
+                    ->with(['admin','type','country','zone'])
+                    ->where('account',$data['account'])
+                    ->order($sort, $order)
+                    ->paginate($limit);
+            }
+
+
+//            $list = $this->model
+//                ->with(['admin','type','country','zone'])
+//                ->where($where)
+//                ->order($sort, $order)
+//                ->paginate($limit);
+
 //            $zelle_fees =Db::name('admin')->where('id',$this->auth->id)->field('zelle_fees')->find();
 //            $cash_fees =Db::name('admin')->where('id',$this->auth->id)->field('cash_fees')->find();
 //            $venmo_fees =Db::name('admin')->where('id',$this->auth->id)->field('venmo_fees')->find();
@@ -76,11 +114,14 @@ class Zelle extends Backend
 				$row->getRelation('type')->visible(['name']);
 				$row->getRelation('country')->visible(['name']);
 				$row->getRelation('zone')->visible(['name']);
+
+
 //                $row['fees'] =$zelle_fees['zelle_fees'];
 //                $row['fees'] =$zelle_fees['zelle_fees'];
 //                $row['amount'] =$row['price']*(1-$row['fees']);
+
             }
-//var_dump($row['amount']);
+
             $result = array("total" => $list->total(), "rows" => $list->items());
 
             return json($result);
@@ -89,11 +130,167 @@ class Zelle extends Backend
     }
     public function import()
     {
-        return parent::import();
+
+        $file = $this->request->request('file');
+        if (!$file) {
+            $this->error(__('Parameter %s can not be empty', 'file'));
+        }
+        $filePath = ROOT_PATH . DS . 'public' . DS . $file;
+        if (!is_file($filePath)) {
+            $this->error(__('No results were found'));
+        }
+        //实例化reader
+        $ext = pathinfo($filePath, PATHINFO_EXTENSION);
+        if (!in_array($ext, ['csv', 'xls', 'xlsx'])) {
+            $this->error(__('Unknown data format'));
+        }
+        if ($ext === 'csv') {
+            $file = fopen($filePath, 'r');
+            $filePath = tempnam(sys_get_temp_dir(), 'import_csv');
+            $fp = fopen($filePath, 'w');
+            $n = 0;
+            while ($line = fgets($file)) {
+                $line = rtrim($line, "\n\r\0");
+                $encoding = mb_detect_encoding($line, ['utf-8', 'gbk', 'latin1', 'big5']);
+                if ($encoding !== 'utf-8') {
+                    $line = mb_convert_encoding($line, 'utf-8', $encoding);
+                }
+                if ($n == 0 || preg_match('/^".*"$/', $line)) {
+                    fwrite($fp, $line . "\n");
+                } else {
+                    fwrite($fp, '"' . str_replace(['"', ','], ['""', '","'], $line) . "\"\n");
+                }
+                $n++;
+            }
+            fclose($file) || fclose($fp);
+
+            $reader = new Csv();
+        } elseif ($ext === 'xls') {
+            $reader = new Xls();
+        } else {
+            $reader = new Xlsx();
+        }
+
+        //导入文件首行类型,默认是注释,如果需要使用字段名称请使用name
+        $importHeadType = isset($this->importHeadType) ? $this->importHeadType : 'comment';
+
+        $table = $this->model->getQuery()->getTable();
+        $database = \think\Config::get('database.database');
+        $fieldArr = [];
+        $list = db()->query("SELECT COLUMN_NAME,COLUMN_COMMENT FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = ? AND TABLE_SCHEMA = ?", [$table, $database]);
+
+        foreach ($list as $k => $v) {
+            if ($importHeadType == 'comment') {
+                $v['COLUMN_COMMENT'] = explode(':', $v['COLUMN_COMMENT'])[0]; //字段备注有:时截取
+                $fieldArr[$v['COLUMN_COMMENT']] = $v['COLUMN_NAME'];
+            } else {
+                $fieldArr[$v['COLUMN_NAME']] = $v['COLUMN_NAME'];
+            }
+        }
+
+        //加载文件
+        $insert = [];
+        try {
+            if (!$PHPExcel = $reader->load($filePath)) {
+                $this->error(__('Unknown data format'));
+            }
+            $currentSheet = $PHPExcel->getSheet(0);  //读取文件中的第一个工作表
+
+            $allColumn = $currentSheet->getHighestDataColumn(); //取得最大的列号
+            $allRow = $currentSheet->getHighestRow(); //取得一共有多少行
+            $maxColumnNumber = Coordinate::columnIndexFromString($allColumn);
+            $fields = [];
+            for ($currentRow = 1; $currentRow <= 1; $currentRow++) {
+                for ($currentColumn = 1; $currentColumn <= $maxColumnNumber; $currentColumn++) {
+                    $val = $currentSheet->getCellByColumnAndRow($currentColumn, $currentRow)->getValue();
+                    $fields[] = $val;
+                }
+            }
+
+            for ($currentRow = 2; $currentRow <= $allRow; $currentRow++) {
+                $values = [];
+                for ($currentColumn = 1; $currentColumn <= $maxColumnNumber; $currentColumn++) {
+                    $val = $currentSheet->getCellByColumnAndRow($currentColumn, $currentRow)->getValue();
+                    $values[] = is_null($val) ? '' : $val;
+                }
+                $row = [];
+                $temp = array_combine($fields, $values);
+                foreach ($temp as $k => $v) {
+                    if (isset($fieldArr[$k]) && $k !== '') {
+                        $row[$fieldArr[$k]] = $v;
+                    }
+                }
+                if ($row) {
+                    $insert[] = $row;
+                }
+            }
+//            var_dump($insert);
+//            exit;
+            foreach ($insert as $key => $data) {
+                //更新id
+                $data['ID']=Db::table($table)->order('id', 'desc')->value('id');
+               $product_type_ids = Db::table('fa_product_type')->field('id')->where('name',$data['product_type_ids'])->find();
+//               var_dump($product_type_ids);
+////               exit;
+               $country_id = Db::table('fa_country')->field('country_id')->where('name',$data['country_id'])->find();
+               $zone_id = Db::table('fa_zone')->field('zone_id')->where('name',$data['zone_id'])->find();
+//               $admin_id = Db::table('fa_admin')->field('user_id')->where('name',$data['admin_id'])->find();
+               $data['product_type_ids'] =$product_type_ids['id']?? null;
+
+               $data['country_id'] =$country_id['country_id']?? null;
+               $data['zone_id'] =$zone_id['zone_id']?? null;
+                $data['fees'] =floatval(str_replace('%', '', $data['fees'])) / 100;
+               $data['price']=str_replace('$','',$data['price'])?? null;
+               $data['amount']=str_replace('$','',$data['amount'])?? null;
+                $insert[$key] = $data;
+            }
+//            var_dump($insert);
+//            exit();
+//var_dump($insert);
+//            exit();
+
+        } catch (Exception $exception) {
+            $this->error($exception->getMessage());
+        }
+        if (!$insert) {
+            $this->error(__('No rows were updated'));
+        }
+
+        try {
+            //是否包含admin_id字段
+            $has_admin_id = false;
+            foreach ($fieldArr as $name => $key) {
+                if ($key == 'admin_id') {
+                    $has_admin_id = true;
+                    break;
+                }
+            }
+            if ($has_admin_id) {
+                $auth = Auth::instance();
+                foreach ($insert as &$val) {
+
+                    if (empty($val['admin_id'])) {
+                        $val['admin_id'] = $auth->isLogin() ? $auth->id : 0;
+                    }
+                }
+            }
+
+
+            $this->model->saveAll($insert);
+        } catch (PDOException $exception) {
+            $msg = $exception->getMessage();
+            if (preg_match("/.+Integrity constraint violation: 1062 Duplicate entry '(.+)' for key '(.+)'/is", $msg, $matches)) {
+                $msg = "导入失败，包含【{$matches[1]}】的记录已存在";
+            };
+            $this->error($msg);
+        } catch (Exception $e) {
+            $this->error($e->getMessage());
+        }
+
+        $this->success();
     }
     public function groupcheck(){
         //
-
         $admin_id = $this->auth->id;
         $groupName=$this->auth->getGroups($admin_id);
         $groupName = array_column($groupName, 'name');
@@ -103,8 +300,8 @@ class Zelle extends Backend
         }else{
             return true;
         }
-
     }
+
     public function add()
     {
         if (false === $this->request->isPost()) {
@@ -375,12 +572,33 @@ class Zelle extends Backend
         $this->success();
     }
 
+    public function merstyle()
+    {
+        $admin_id = $this->auth->id;
+        $groupName=$this->auth->getGroups($admin_id);
+        $groupName = array_column($groupName, 'name');
+        $groupName =$groupName[0];
+        if ($groupName == '商户'){
+            return "inline-block";
+        }else{
+            return "none";
+        }
+    }
 
+    public function adminstyle()
+    {
+        if ($this->auth->id == 1){
+            return "none";
+        }else{
+            return "inline-block";
+        }
+    }
     public function test()
     {
         echo $this->invoice("007");
     }
     //更具订单号生成发票
+
     public function invoice($order_num)
     {
         $table = $this->model->getTable();
@@ -394,6 +612,17 @@ class Zelle extends Backend
             }
         }
 
+        //发票链接写入数据库
+        if (empty($data['vendor_invoice'])) {
+            $invoce = request()->domain()."/sFGucSHOMQ.php/zelle/invoice.html?order_num=".$data['order_num'];
+            Db::table($table)->where('id',$data['ID'])->update([
+                'vendor_invoice' => $invoce,
+            ]);
+        }else{
+            $data['vendor_invoice'] = $data['vendor_invoice'];
+        }
+
+
         if ($data['country_id']){
             $country = Db::table('fa_country')->field('name')->where('country_id',$data['country_id'])->value('name');
         }
@@ -404,8 +633,14 @@ class Zelle extends Backend
             $productname = Db::table('fa_product_type')->field('name')->where('id',$data['product_type_ids'])->value('name');
         }
         $email=Db::table('fa_admin')->where('id',$data['admin_id'])->value('email');
-//        var_dump($data);
-//        exit();
+
+        if($data['order_status'] == '已发货'){
+            $data['order_status'] = "Shipped";
+        }else if($data['order_status'] == '已入账'){
+            $data['order_status'] = "Paid";
+        }else{
+            $data['order_status'] = "Unpaid";
+        }
 
         $data =[
             'order_date'=>$data['order_date'],
@@ -424,10 +659,43 @@ class Zelle extends Backend
             'amount' =>$data['amount'],
             'waybill_num' =>$data['waybill_num'],
             'email' =>$email,
+            'order_status' =>$data['order_status'],
+            'account' =>$data['account'],
         ];
+
+
         // 通过 assign 方法传递数据
         $this->view->assign('data', $data);
 
         return $this->view->fetch('zelle/invoice');
     }
+
+   /* public function venzelle(){
+        $admin_id = $this->auth->id;
+        $groupName=$this->auth->getGroups($admin_id);
+        $groupName = array_column($groupName, 'name');
+        $group_text=$groupName[0] ?? null;;
+
+        if( $group_text=="供应商"){
+            $query = Db::table('fa_mer_ven')->field('mer_id')->where('ven_id',$admin_id)->select();
+//            var_dump($query);
+            foreach ($query as $data) {
+                $mer_id = $data['mer_id'];
+            }
+            //商户的数据
+            $zelleorder = Db::table('fa_zelle')->where('admin_id',$mer_id)->select();
+            //更新商户id 为供应商id
+            Db::table('fa_zelle')->where('admin_id',$mer_id)->update([
+                'admin_id' => $admin_id,
+            ]);
+
+//            $zelleorder = json($zelleorder);
+//            var_dump($zelleorder);
+//            return $this->view->fetch('zelle/index',$zelleorder);
+        }else{
+
+        }
+
+    }
+   */
 }

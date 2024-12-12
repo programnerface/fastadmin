@@ -33,6 +33,7 @@ class Index extends Backend
         $this->request->filter('trim,strip_tags,htmlspecialchars');
     }
 
+
     /**
      * 后台首页
      */
@@ -63,9 +64,21 @@ class Index extends Backend
         $this->view->assign('fixedmenu', $fixedmenu);
         $this->view->assign('referermenu', $referermenu);
         $this->view->assign('title', __('Home'));
+        $this->view->assign('style', $this->merstyle());
         return $this->view->fetch();
     }
-
+    public function merstyle()
+    {
+        $admin_id = $this->auth->id;
+        $groupName=$this->auth->getGroups($admin_id);
+        $groupName = array_column($groupName, 'name');
+        $groupName =$groupName[0];
+        if ($groupName == '商户'){
+            return "inline-block";
+        }else{
+            return "none";
+        }
+    }
     /**
      * 管理员登录
      */

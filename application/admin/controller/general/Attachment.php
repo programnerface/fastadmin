@@ -29,6 +29,7 @@ class Attachment extends Backend
         $this->view->assign("mimetypeList", \app\common\model\Attachment::getMimetypeList());
         $this->view->assign("categoryList", \app\common\model\Attachment::getCategoryList());
         $this->assignconfig("categoryList", \app\common\model\Attachment::getCategoryList());
+
     }
 
     /**
@@ -77,6 +78,8 @@ class Attachment extends Backend
         }
         return $this->view->fetch();
     }
+
+
 
     /**
      * 选择附件

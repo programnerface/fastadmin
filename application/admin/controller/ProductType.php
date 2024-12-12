@@ -17,6 +17,7 @@ class ProductType extends Backend
      * @var \app\admin\model\ProductType
      */
     protected $model = null;
+    protected $dataLimit = 'auth';
     protected $noNeedRight = ["index"];
     public function _initialize()
     {

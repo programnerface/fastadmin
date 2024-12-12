@@ -12,6 +12,12 @@
 @import url("../libs/bootstrap-select/dist/css/bootstrap-select.min.css");
 @import url("../libs/fastadmin-selectpage/selectpage.css");
 @import url("../libs/bootstrap-slider/slider.css");
+/*a#mer_account {display: block;}*/
+/*a#mer_account {*/
+/*  display: none;*/
+/*}*/
+
+
 .m-0 {
   margin-top: 0px !important;
   margin-right: 0px !important;

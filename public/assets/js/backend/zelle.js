@@ -47,6 +47,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
                         {field: 'vender', title: __('Vender'), operate: 'LIKE', table: table, class: 'autocontent', visible: issuper,formatter: Table.api.formatter.content},
                         {field: 'order_num', title: __('Order_num'), operate: 'LIKE'},
                         {field: 'order_date', title: __('Order_date'), operate:'RANGE', addclass:'datetimerange', autocomplete:false},
+                        {field: 'account', title: __('Zelle账号'), operate: 'LIKE', table: table, class: 'autocontent', formatter: Table.api.formatter.content},
                         {field: 'payer', title: __('Payer'), operate: 'LIKE', table: table, class: 'autocontent', formatter: Table.api.formatter.content},
                         // {field: 'product_type_ids', title: __('Product_type_ids')},
                         {field: 'type.name', title: __('产品'), operate: 'LIKE', table: table, class: 'autocontent', formatter: Table.api.formatter.content,visible: name},

@@ -27,15 +27,14 @@ class DayTrade extends Backend
         parent::_initialize();
         $this->model = new \app\admin\model\DayTrade;
         $this->GetDaTrade();
+
     }
 
     public function GetDaTrade(){
         $admin_id =$this->GetAdminId();
         if($admin_id == 1){
-
             $this->getDayOrder();
         }else{
-
             $this->getDayOrderById();
         }
 
@@ -231,6 +230,94 @@ class DayTrade extends Backend
         return $result;
     }
 
+    //供应商订单数据
+    public function venDataById()
+    {
+
+        $query = Db::table('fa_mer_ven')->field('account')->where('ven_id',$this->auth->id)->select();
+        foreach ($query as $item) {
+            $account = $item['account'];
+        }
+        $results = Db::table('fa_zelle')
+            ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_zelleorder" as source')
+            ->where([
+                'account' => $account,
+                'order_check'=>'审核通过'
+            ]) // 给主表查询添加条件
+            ->group('DATE(order_date)') // 确保主查询中有 GROUP BY
+            ->union(function ($query) use ($account) {
+                $query->table('fa_cash')
+                    ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_cashorder" as source')
+                    ->where([
+                        'account' => $account,
+                        'order_check'=>'审核通过'
+                    ]) // 在子查询中加上 admin_id 条件
+                    ->group('DATE(order_date)'); // 子查询需要添加 GROUP BY
+            }, true)
+            ->union(function ($query) use ($account) {
+                $query->table('fa_venmo')
+                    ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_venmoorders" as source')
+                    ->where([
+                        'account' => $account,
+                        'order_check'=>'审核通过'
+                    ]) // 在子查询中加上 admin_id 条件
+                    ->group('DATE(order_date)'); // 子查询需要添加 GROUP BY
+            }, true)
+            ->union(function ($query) use ($account) {
+                $query->table('fa_square')
+                    ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_squareorders" as source')
+                    ->where([
+                        'account' => $account,
+                        'order_check'=>'审核通过'
+                    ]) // 在子查询中加上 admin_id 条件
+                    ->group('DATE(order_date)'); // 子查询需要添加 GROUP BY
+            }, true)
+            ->order('order_date', 'asc')
+            ->select();
+
+        $result = [];
+
+        foreach ($results as $item) {
+
+            $orderDate = $item['order_date'];
+            $source = $item['source'];
+            // 动态生成字段名
+            $fieldPrefix = '';
+            if ($source === 'merchant_cashorder') {
+                $fieldPrefix = 'cash';
+            } elseif ($source === 'merchant_zelleorder') {
+                $fieldPrefix = 'zelle';
+            } elseif ($source === 'merchant_squareorders') {
+                $fieldPrefix = 'square';
+            } elseif ($source === 'merchant_venmoorders') {
+                $fieldPrefix = 'venmo';
+            }
+
+
+            if ($fieldPrefix) {
+                // 初始化日期组
+                if (!isset($result[$orderDate])) {
+                    $result[$orderDate] = [
+                        'order_date' => $orderDate,
+                        'day_count' => 0,   // 日订单数
+                        'day_amount' => 0.0 // 日交易额
+                    ];
+                }
+
+                // 添加字段值
+                $result[$orderDate][$fieldPrefix . '_ids'] = $item['ids'];
+                $result[$orderDate][$fieldPrefix . '_count'] = $item['count'];
+                $result[$orderDate][$fieldPrefix . '_amount'] = $item['total_amount'];
+                // 累加日订单数和日交易额
+                $result[$orderDate]['day_count'] += $item['count'];
+                $result[$orderDate]['day_amount'] += (float)$item['total_amount'];
+            }
+
+        }
+        return $result;
+    }
+
+
 //管理员
     public function getDayOrder()
     {
@@ -375,7 +462,19 @@ class DayTrade extends Backend
 
     public function getDayOrderById()
     {
-        $result = $this->getOrderDataById();
+        $admin_id = $this->auth->id;
+        $groupName=$this->auth->getGroups($admin_id);
+        $groupName = array_column($groupName, 'name');
+        $group_text=$groupName[0] ?? null;
+        if ($group_text == '供应商'){
+
+            $result = $this->venDataById();
+        }else{
+            $result = $this->getOrderDataById();
+        }
+
+
+
 
         $this->checkDate();
         // 获取fa_day_trade_table表中的所有订单日期

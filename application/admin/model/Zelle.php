@@ -82,4 +82,5 @@ class Zelle extends Model
     {
         return $this->belongsTo('Zone', 'zone_id', 'zone_id', [], 'LEFT')->setEagerlyType(0);
     }
+
 }

@@ -144,7 +144,11 @@
         </tfoot>
     </table>
 <!--    <p>Shipping Method: FedEx</p>-->
+    <p>Order Status: {$data.order_status|htmlentities}</p>
     <p>Tracking Number: <a href="https://t.17track.net/en#nums={$data.waybill_num|htmlentities}" target="_blank">{$data.waybill_num|htmlentities}</a></p>
+    <p>Payment Method:</p>
+    <p>Name: {$data.payer|htmlentities}</p>
+    <p>Zelle: {$data.account|htmlentities}</p>
 
     <div class="footer">
         <p>Thank you for your purchase!</p>

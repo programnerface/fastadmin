@@ -1,12 +1,16 @@
 <?php
 
 return [
-    'Merchant_name'    => '
-商户名称',
+    'Merchant_name'    => '商户名称',
     'Order_num'        => '订单号',
     'Order_date'       => '日期',
     'Payer'            => '付款人',
-    'Price'            => '金额',
+    'Product_type_ids' => '产品',
+    'Postcode' => '邮编',
+    'Vender' => '供应商',
+    'U_price' => '单价',
+    'Quantity' => '数量',
+    'Price'            => '总金额',
     'Confirm_code'     => '确认码',
     'Fees'             => '手续费',
     'Amount'           => '应结算',

@@ -35,3 +35,4 @@ require __DIR__ . '/../thinkphp/base.php';
 
 // 执行应用
 \think\App::run()->send();
+

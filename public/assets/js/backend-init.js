@@ -24,6 +24,11 @@ define(['backend'], function (Backend) {
 
 });
 
+// if (!Config.isSuperAdmin){
+//     console.log()
+// document.getElementById('mer_account').style.display = 'none';
+// }
+// document.getElementById('mer_account').style.display = 'none';
 $(document).on("change", "#c-country_id", function(){
     // 父级发生切换，清除子级所选
     $("#c-zone_id").selectPageClear();
