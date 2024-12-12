@@ -84,7 +84,7 @@ define(['jquery', 'bootstrap', 'backend', 'table', 'form'], function ($, undefin
 
                         {field: 'order_status', title: __('Order_status'), searchList: {"未确认":__('未确认'),"已入账":__('已入账'),"已发货":__('已发货')}, custom:{"未确认":'danger'},formatter: Table.api.formatter.status},
                         {field: 'vendor_invoice', title: __('发票'), operate: 'LIKE', table: table,  class: 'autocontent', visible: name,formatter:function (value, row, index){
-// console.log(row.order_num)
+
 //                                 if (!value){
 //                                     return ''
 //                                 }else{

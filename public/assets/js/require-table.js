@@ -24,13 +24,35 @@ define(['jquery', 'bootstrap', 'moment', 'moment/locale/zh-cn', 'bootstrap-table
                         return !isNaN($(cell).text()) ? '\\@' : '';
                     },
                 },
-                onCellHtmlData:function($cell, row, col, htmlContent){
-                    function stripHtmlTags(htmlString) {
+                onCellHtmlData: function ($cell, row, col, htmlContent) {
+                    function processHtmlContent(htmlString) {
                         var tempDiv = document.createElement("div");
                         tempDiv.innerHTML = htmlString;
+
+                        // Check for <img> tags and extract src
+                        var imgTag = tempDiv.querySelector("img");
+                        if (imgTag && imgTag.src) {
+                            return imgTag.src; // Return the src of the image
+                        }
+
+                        // Check for <a> tags
+                        var aTag = tempDiv.querySelector("a");
+                        if (aTag) {
+                            // Check for specific data-field values
+                            var dataField = aTag.getAttribute("data-field");
+                            if (dataField === "order_status" || dataField === "order_check") {
+                                var dataValue = aTag.getAttribute("data-value");
+                                return dataValue ? dataValue : ""; // Return data-value if present
+                            }
+                            // Otherwise, return href
+                            return aTag.href ? aTag.href : ""; // Return href if present
+                        }
+
+                        // If no special tags, return plain text
                         return tempDiv.textContent || tempDiv.innerText || "";
                     }
-                    return stripHtmlTags(htmlContent);
+
+                    return processHtmlContent(htmlContent);
                 },
 
                 ignoreColumn: [0, 'operate'] //默认不导出第一列(checkbox)与操作(operate)列
