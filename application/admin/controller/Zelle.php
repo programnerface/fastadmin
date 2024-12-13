@@ -81,17 +81,35 @@ class Zelle extends Backend
                     ->paginate($limit);
             }else{
 
-                $query = Db::table('fa_mer_ven')->field('account')->where('ven_id',$this->auth->id)->select();
-//var_dump($query);
-//exit;
+//                $query = Db::table('fa_mer_ven')->field('account,')->where(['type'=>'Zelle','ven_id'=>$this->auth->id])->select();
+                $query = Db::table('fa_zelle')
+                    ->alias('z') // 设置别名
+                    ->join('fa_mer_ven mv', 'z.account = mv.account AND z.name = mv.name') // 关联条件
+                    ->field('z.account, z.name') // 选择需要的字段，只保留一致的字段
+                    ->where(['mv.type' => 'Zelle', 'mv.ven_id' => $this->auth->id]) // 限制条件
+                    ->select();
+
+
+
+                $accounts = [];
                 foreach ($query as $data) {
-                    $account = $data['account'];
+                    $accounts = $data['account'];
+                    $name = $data['name'];
                 }
+
+                $accounts = array_column($query, 'account');
+//                $accounts = array_column($query, 'account');
+
+//                var_dump($accounts);
+//exit;
                 $list = $this->model
                     ->with(['admin','type','country','zone'])
-                    ->where('account',$data['account'])
+                    ->whereIn('account',$accounts)
+                    ->where('zelle.name',$data['name'])
                     ->order($sort, $order)
                     ->paginate($limit);
+
+
             }
 
 
@@ -446,6 +464,7 @@ class Zelle extends Backend
             return $this->view->fetch();
         }
         $zelle_fees =Db::name('admin')->where('id',$this->auth->id)->field('zelle_fees')->find();
+
         $params = $this->request->post('row/a');
         if(empty($params['fees'])){
             $params['fees'] =$zelle_fees['zelle_fees'];
@@ -453,6 +472,8 @@ class Zelle extends Backend
             $params['fees'] =$params['fees'];
         }
         $params['amount'] =$params['price']*(1-$params['fees']);
+
+
         $params['u_price'] =$params['price']/$params['quantity'];//单价
         if (empty($params)) {
             $this->error(__('Parameter %s can not be empty', ''));
@@ -493,10 +514,17 @@ class Zelle extends Backend
         }
         $zelle_fees =Db::name('admin')->where('id',$this->auth->id)->field('zelle_fees')->find();
         $params = $this->request->post('row/a');
+
         if(empty($params['fees'])){
             $params['fees'] =$zelle_fees['zelle_fees'];
         }else{
             $params['fees'] =$params['fees'];
+        }
+        $zelle_quantity =Db::table('fa_zelle')->where('order_num',$params['order_num'])->field('quantity')->find();
+        if(empty($params['quantity'])){
+            $params['quantity'] =$zelle_quantity['quantity'];
+        }else{
+            $params['quantity'] =$params['quantity'];
         }
         $params['amount'] =$params['price']*(1-$params['fees']);
         $params['u_price'] =$params['price']/$params['quantity'];//单价
@@ -642,6 +670,11 @@ class Zelle extends Backend
             $data['order_status'] = "Unpaid";
         }
 
+        if ($data['account']){
+            $accountname = Db::table('fa_mer_ven')->field('name')->where('account',$data['account'])->value('name');
+        }
+
+
         $data =[
             'order_date'=>$data['order_date'],
             'order_num' => $data['order_num'],
@@ -661,6 +694,7 @@ class Zelle extends Backend
             'email' =>$email,
             'order_status' =>$data['order_status'],
             'account' =>$data['account'],
+            'name' =>$accountname,
         ];
 
 

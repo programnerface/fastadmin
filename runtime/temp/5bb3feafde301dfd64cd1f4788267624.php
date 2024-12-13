@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:91:"D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\index\index.html";i:1733999085;s:81:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\meta.html";i:1732090683;s:83:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\header.html";i:1732090683;s:81:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\menu.html";i:1732090683;s:84:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\control.html";i:1732090683;s:83:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\script.html";i:1732090683;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:91:"D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\index\index.html";i:1734053253;s:81:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\meta.html";i:1732090683;s:83:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\header.html";i:1732090683;s:81:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\menu.html";i:1732090683;s:84:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\control.html";i:1732090683;s:83:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\script.html";i:1732090683;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -323,6 +323,9 @@
     <style>
             a#mer_account {
                 display: <?php echo $style; ?>;
+            }
+            a#product_type {
+                display: <?php echo $btnstyle; ?>;
             }
         </style>
     </body>

@@ -65,8 +65,10 @@ class Index extends Backend
         $this->view->assign('referermenu', $referermenu);
         $this->view->assign('title', __('Home'));
         $this->view->assign('style', $this->merstyle());
+        $this->view->assign('btnstyle', $this->btnstyle());
         return $this->view->fetch();
     }
+    //商户显示 供应商 管理员不显示
     public function merstyle()
     {
         $admin_id = $this->auth->id;
@@ -77,6 +79,19 @@ class Index extends Backend
             return "inline-block";
         }else{
             return "none";
+        }
+    }
+    //供应商不显示 管理员商户显示
+    public function btnstyle()
+    {
+        $admin_id = $this->auth->id;
+        $groupName=$this->auth->getGroups($admin_id);
+        $groupName = array_column($groupName, 'name');
+        $groupName =$groupName[0];
+        if ($groupName == '供应商'){
+            return "none";
+        }else{
+            return "inline-block";
         }
     }
     /**

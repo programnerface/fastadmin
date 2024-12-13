@@ -234,47 +234,52 @@ class DayTrade extends Backend
     public function venDataById()
     {
 
-        $query = Db::table('fa_mer_ven')->field('account')->where('ven_id',$this->auth->id)->select();
-        foreach ($query as $item) {
-            $account = $item['account'];
-        }
+//        // 查询 fa_mer_ven 中的 account 和 type
+//        $query = Db::table('fa_mer_ven')->field('account, type,name')->where('ven_id', $this->auth->id)->select();
+//
+//// 按类型分组获取对应的 accounts
+//        $accountsByType = [];
+//        foreach ($query as $item) {
+//            $accountsByType[$item['type']][] = $item['account'];
+//        }
         $results = Db::table('fa_zelle')
-            ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_zelleorder" as source')
-            ->where([
-                'account' => $account,
-                'order_check'=>'审核通过'
-            ]) // 给主表查询添加条件
-            ->group('DATE(order_date)') // 确保主查询中有 GROUP BY
-            ->union(function ($query) use ($account) {
+            ->alias('z')
+            ->join('fa_mer_ven mv', 'z.account = mv.account AND mv.type = "Zelle" AND z.name = mv.name') // 添加 z.name = mv.name 的关联
+            ->field('DATE(z.order_date) as order_date, GROUP_CONCAT(z.id) as ids, COUNT(*) as count, SUM(z.amount) as total_amount, "merchant_zelleorder" as source')
+            ->where('z.order_check', '审核通过')
+            ->group('DATE(z.order_date)')
+            ->union(function ($query) {
                 $query->table('fa_cash')
-                    ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_cashorder" as source')
-                    ->where([
-                        'account' => $account,
-                        'order_check'=>'审核通过'
-                    ]) // 在子查询中加上 admin_id 条件
-                    ->group('DATE(order_date)'); // 子查询需要添加 GROUP BY
+                    ->alias('c')
+                    ->join('fa_mer_ven mv', 'c.account = mv.account AND mv.type = "Cash" AND c.name = mv.name') // 添加 c.name = mv.name 的关联
+                    ->field('DATE(c.order_date) as order_date, GROUP_CONCAT(c.id) as ids, COUNT(*) as count, SUM(c.amount) as total_amount, "merchant_cashorder" as source')
+                    ->where('c.order_check', '审核通过')
+                    ->group('DATE(c.order_date)');
             }, true)
-            ->union(function ($query) use ($account) {
+            ->union(function ($query) {
                 $query->table('fa_venmo')
-                    ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_venmoorders" as source')
-                    ->where([
-                        'account' => $account,
-                        'order_check'=>'审核通过'
-                    ]) // 在子查询中加上 admin_id 条件
-                    ->group('DATE(order_date)'); // 子查询需要添加 GROUP BY
+                    ->alias('v')
+                    ->join('fa_mer_ven mv', 'v.account = mv.account AND mv.type = "Venmo" AND v.name = mv.name') // 添加 v.name = mv.name 的关联
+                    ->field('DATE(v.order_date) as order_date, GROUP_CONCAT(v.id) as ids, COUNT(*) as count, SUM(v.amount) as total_amount, "merchant_venmoorders" as source')
+                    ->where('v.order_check', '审核通过')
+                    ->group('DATE(v.order_date)');
             }, true)
-            ->union(function ($query) use ($account) {
+            ->union(function ($query) {
                 $query->table('fa_square')
-                    ->field('DATE(order_date) as order_date, GROUP_CONCAT(id) as ids, COUNT(*) as count, SUM(amount) as total_amount, "merchant_squareorders" as source')
-                    ->where([
-                        'account' => $account,
-                        'order_check'=>'审核通过'
-                    ]) // 在子查询中加上 admin_id 条件
-                    ->group('DATE(order_date)'); // 子查询需要添加 GROUP BY
+                    ->alias('sq')
+                    ->join('fa_mer_ven mv', 'sq.account = mv.account AND mv.type = "Square" AND sq.name = mv.name') // 添加 sq.name = mv.name 的关联
+                    ->field('DATE(sq.order_date) as order_date, GROUP_CONCAT(sq.id) as ids, COUNT(*) as count, SUM(sq.amount) as total_amount, "merchant_squareorders" as source')
+                    ->where('sq.order_check', '审核通过')
+                    ->group('DATE(sq.order_date)');
             }, true)
             ->order('order_date', 'asc')
             ->select();
 
+// 初始化查询
+
+
+//        var_dump($results);
+//exit;
         $result = [];
 
         foreach ($results as $item) {
@@ -467,7 +472,7 @@ class DayTrade extends Backend
         $groupName = array_column($groupName, 'name');
         $group_text=$groupName[0] ?? null;
         if ($group_text == '供应商'){
-
+//var_dump(111111);
             $result = $this->venDataById();
         }else{
             $result = $this->getOrderDataById();

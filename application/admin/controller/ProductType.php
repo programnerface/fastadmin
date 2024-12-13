@@ -26,7 +26,30 @@ class ProductType extends Backend
 
     }
 
-
+    public function index()
+    {
+        $this->relationSearch = true;
+        //设置过滤方法
+        $this->request->filter(['strip_tags', 'trim']);
+        if (false === $this->request->isAjax()) {
+            return $this->view->fetch();
+        }
+        //如果发送的来源是 Selectpage，则转发到 Selectpage
+        if ($this->request->request('keyField')) {
+            return $this->selectpage();
+        }
+        [$where, $sort, $order, $offset, $limit] = $this->buildparams();
+        $list = $this->model
+            ->with(['admin'])
+            ->where($where)
+            ->order($sort, $order)
+            ->paginate($limit);
+        foreach ($list as $row) {
+            $row->getRelation('admin')->visible(['username']);
+        }
+        $result = ['total' => $list->total(), 'rows' => $list->items()];
+        return json($result);
+    }
 
     /**
      * 默认生成的控制器所继承的父类中有index/add/edit/del/multi五个基础方法、destroy/restore/recyclebin三个回收站方法

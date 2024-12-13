@@ -67,7 +67,19 @@ class WithdrawCount extends Backend
         }
         return $this->view->fetch();
     }
-    public function GetWithdrawCount(){
+    public function GetWithdrawCount()
+    {
+        $admin_id = $this->auth->id;
+        $groupName=$this->auth->getGroups($admin_id);
+        $groupName = array_column($groupName, 'name');
+        $group_text=$groupName[0] ?? null;
+        if($group_text  == '供应商'){
+            $this->GetVenWithdrawCount();
+        }else{
+            $this->GetMerWithdrawCount();
+        }
+    }
+    public function GetMerWithdrawCount(){
         $admin_id =$this->auth->id;
         //获取zelle订单总金额
         $zelleprice = $this->getcount('fa_zelle','price');
@@ -119,11 +131,97 @@ class WithdrawCount extends Backend
     }
     public function getcount($table,$field){
 
-
         $query = DB::table($table)->where(['admin_id'=>$this->auth->id,'order_check'=>'审核通过'])->sum($field);
 
         return $query;
     }
+    public function getcountven($table,$field){
+        $query = Db::table($table)
+            ->alias('z') // 设置别名
+            ->join('fa_mer_ven mv', 'z.account = mv.account AND z.name = mv.name') // 关联条件
+            ->field('z.account, z.name') // 选择需要的字段
+            ->where(['mv.type' => 'Zelle', 'mv.ven_id' => $this->auth->id]) // 其他条件
+            ->select();
+
+        $accounts = [];
+        foreach ($query as $data) {
+            $accounts = $data['account'];
+            $name = $data['name'];
+        }
+
+        $accounts = array_column($query, 'account');
+
+        $query = DB::table($table)
+            ->whereIn('account', $accounts ?? [])
+            ->where('name', $name ?? '')
+            ->where('order_check', '审核通过')->sum($field);
+
+
+        return $query;
+    }
+    public function GetVenWithdrawCount()
+    {
+        // 查询 fa_mer_ven 中的 account 和 type
+//        $query = Db::table('fa_mer_ven')->field('account, type')->where('ven_id', $this->auth->id)->select();
+
+
+//        // 按类型分组获取对应的 accounts
+//        $accountsByType = [];
+//        foreach ($query as $item) {
+//            $accountsByType[$item['type']][] = $item['account'];
+//        }
+
+        $admin_id =$this->auth->id;
+        //获取zelle订单总金额
+        $zelleprice = $this->getcountven('fa_zelle','price');
+
+        //zelle订单应结算总额
+        $zelleamount = $this->getcountven('fa_zelle','amount');
+        $cashprice =$this->getcountven('fa_cash','price');
+        $cashamount = $this->getcountven('fa_cash','amount');
+        $venmoprice = $this->getcountven('fa_venmo','price');
+        $venmoamount = $this->getcountven('fa_venmo','amount');
+        $squareprice = $this->getcountven('fa_square','price');
+        $squareamount = $this->getcountven('fa_square','amount');
+        //总金额
+        $total_price =$zelleprice+$cashprice+$venmoprice+$squareprice;
+        //应结算
+        $total_amount=$zelleamount+$cashamount+$venmoamount+$squareamount;
+        //已提现
+        $withdrawal = Db::table('fa_withdrawn_log')->where(['admin_id'=>$admin_id,'withdrawal_check'=>'审核通过'])->sum('withdrawal_usamount');
+        //已退款
+        $refund = Db::table('fa_refund')->where(['admin_id'=>$admin_id,'refund_status'=>'退款成功'])->sum('refund_amount');
+        //未结算
+        $unset=$total_amount-$withdrawal-$refund;
+
+
+        $table =$this->model->getTable();
+
+        $query = Db::table($table)->where('admin_id',$this->auth->id)->count();
+
+        if ($query > 0){
+            //用户已存在 更新数据
+            Db::table($table)->where('admin_id',$admin_id)->update([
+                'total_amount' => $total_price, //总交易额
+                'set_amount'   => $total_amount, //应结算
+                'withdrawn_amount' => $withdrawal, //已提现
+                'refund_amount' => $refund, //已退款
+                'unset_amount' => $unset,//未结算
+            ]);
+        }else{
+            //插入
+            Db::table($table)->insert([
+                'admin_id' => $this->auth->id,
+                'total_amount' => $total_price, //总交易额
+                'set_amount'   => $total_amount, //应结算
+                'withdrawn_amount' => $withdrawal, //已提现
+                'refund_amount' => $refund, //已退款
+                'unset_amount' => $unset,//未结算
+            ]);
+        }
+
+    }
+
 
     /**
      * 默认生成的控制器所继承的父类中有index/add/edit/del/multi五个基础方法、destroy/restore/recyclebin三个回收站方法

@@ -64,12 +64,37 @@ class Cash extends Backend
                 return $this->selectpage();
             }
             list($where, $sort, $order, $offset, $limit) = $this->buildparams();
-
-            $list = $this->model
+            $admin_id = $this->auth->id;
+            $groupName=$this->auth->getGroups($admin_id);
+            $groupName = array_column($groupName, 'name');
+            $group_text=$groupName[0] ?? null;;
+            if($this->auth->isSuperAdmin() || $group_text  == '商户'){
+                $list = $this->model
                     ->with(['admin','type','country','zone'])
                     ->where($where)
                     ->order($sort, $order)
                     ->paginate($limit);
+            }else{
+
+                $query = Db::table('fa_mer_ven')->field('account')->where(['type'=>'Cash','ven_id'=>$this->auth->id])->select();
+                $accounts = array_column($query, 'account');
+//var_dump($query);
+//exit;
+//                foreach ($query as $data) {
+//                    $account = $data['account'];
+//                }
+
+                $list = $this->model
+                    ->with(['admin','type','country','zone'])
+                    ->whereIn('account',$accounts)
+                    ->order($sort, $order)
+                    ->paginate($limit);
+            }
+//            $list = $this->model
+//                    ->with(['admin','type','country','zone'])
+//                    ->where($where)
+//                    ->order($sort, $order)
+//                    ->paginate($limit);
 
             foreach ($list as $row) {
                 $row->getRelation('admin')->visible(['username']);
@@ -412,6 +437,12 @@ class Cash extends Backend
         }else{
             $params['fees'] =$params['fees'];
         }
+        $zelle_quantity =Db::table('fa_cash')->where('order_num',$params['order_num'])->field('quantity')->find();
+        if(empty($params['quantity'])){
+            $params['quantity'] =$zelle_quantity['quantity'];
+        }else{
+            $params['quantity'] =$params['quantity'];
+        }
         $params['amount'] =$params['price']*(1-$params['fees']);
         $params['u_price'] =$params['price']/$params['quantity'];//单价
 
@@ -592,7 +623,9 @@ class Cash extends Backend
         }else{
             $data['order_status'] = "Unpaid";
         }
-
+        if ($data['account']){
+            $accountname = Db::table('fa_mer_ven')->field('name')->where('account',$data['account'])->value('name');
+        }
 
         $data =[
             'order_date'=>$data['order_date'],
@@ -613,6 +646,7 @@ class Cash extends Backend
             'email' =>$email,
             'order_status' =>$data['order_status'],
             'account' =>$data['account'],
+            'name' =>$accountname,
         ];
         // 通过 assign 方法传递数据
         $this->view->assign('data', $data);

@@ -27,12 +27,15 @@ class ProductType extends Model
     protected $append = [
 
     ];
-    
-
-    
 
 
 
+
+
+    public function admin()
+    {
+        return $this->belongsTo('Admin', 'admin_id', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
 
 
 
