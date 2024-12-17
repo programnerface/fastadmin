@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:100:"D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\withdraw_count\index.html";i:1733738581;s:84:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\layout\default.html";i:1732090683;s:81:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\meta.html";i:1732090683;s:83:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\script.html";i:1732090683;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:100:"D:\website\phpstudy_pro\WWW\fastadmin.com\public/../application/admin\view\withdraw_count\index.html";i:1734335336;s:84:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\layout\default.html";i:1732090683;s:81:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\meta.html";i:1732090683;s:83:"D:\website\phpstudy_pro\WWW\fastadmin.com\application\admin\view\common\script.html";i:1732090683;}*/ ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -90,23 +90,20 @@
 
         </div>
     </div>
-    <div class="panel-heading">
-        <div class="panel-lead"><em>提现记录</em></div>
 
-    </div>
     <div class="panel-body">
         <div id="myTabContentB" class="tab-content">
-            <div class="tab-pane fade active in" id="withdraw">
+            <div class="tab-pane fade active in" id="first">
                 <div class="widget-body no-padding">
-                    <div id="toolbar2" class="toolbar2">
+                    <div id="toolbar2" class="toolbar">
                         <a href="javascript:;" class="btn btn-primary btn-refresh" title="<?php echo __('Refresh'); ?>" ><i class="fa fa-refresh"></i> </a>
-                        <a href="javascript:;" class="btn btn-success btn-add <?php echo $auth->check('withdraw_log/add')?'':'hide'; ?>" title="<?php echo __('Add'); ?>" ><i class="fa fa-plus"></i> <?php echo __('Add'); ?></a>
-                        <a href="javascript:;" class="btn btn-success btn-edit btn-disabled disabled <?php echo $auth->check('withdraw_log/edit')?'':'hide'; ?>" title="<?php echo __('Edit'); ?>" ><i class="fa fa-pencil"></i> <?php echo __('Edit'); ?></a>
-                        <a href="javascript:;" class="btn btn-danger btn-del btn-disabled disabled <?php echo $auth->check('withdraw_log/del')?'':'hide'; ?>" title="<?php echo __('Delete'); ?>" ><i class="fa fa-trash"></i> <?php echo __('Delete'); ?></a>
+                        <a href="javascript:;" class="btn btn-success btn-add <?php echo $auth->check('day_trade/add')?'':'hide'; ?>" title="<?php echo __('Add'); ?>" ><i class="fa fa-plus"></i> <?php echo __('Add'); ?></a>
+                        <a href="javascript:;" class="btn btn-success btn-edit btn-disabled disabled <?php echo $auth->check('day_trade/edit')?'':'hide'; ?>" title="<?php echo __('Edit'); ?>" ><i class="fa fa-pencil"></i> <?php echo __('Edit'); ?></a>
+                        <a href="javascript:;" class="btn btn-danger btn-del btn-disabled disabled <?php echo $auth->check('day_trade/del')?'':'hide'; ?>" title="<?php echo __('Delete'); ?>" ><i class="fa fa-trash"></i> <?php echo __('Delete'); ?></a>
                     </div>
                     <table id="table2" class="table table-striped table-bordered table-hover table-nowrap"
-                           data-operate-edit="<?php echo $auth->check('withdraw_log/edit'); ?>"
-                           data-operate-del="<?php echo $auth->check('withdraw_log/del'); ?>"
+                           data-operate-edit="<?php echo $auth->check('day_trade/edit'); ?>"
+                           data-operate-del="<?php echo $auth->check('day_trade/del'); ?>"
                            width="100%">
                     </table>
                 </div>

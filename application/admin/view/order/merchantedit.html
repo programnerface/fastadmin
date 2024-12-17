@@ -1,0 +1,152 @@
+<form id="merchantedit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group" style="display: none">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Date')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-date" class="form-control datetimepicker" data-date-format="YYYY-MM-DD HH:mm:ss" data-use-current="true" name="row[date]" type="text" value="{$row.date}">
+        </div>
+    </div>
+    <!--    <div class="form-group">-->
+    <!--        <label class="control-label col-xs-12 col-sm-2">{:__('Merchant')}:</label>-->
+    <!--        <div class="col-xs-12 col-sm-8">-->
+    <!--            <input id="c-merchant" class="form-control" name="row[merchant]" type="text" value="{$row.merchant|htmlentities}">-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <div class="form-group" >
+        <label class="control-label col-xs-12 col-sm-2">{:__('Wallets')}:</label>
+        <div class="col-xs-12 col-sm-2" >
+            <select  id="c-wallets" class="form-control selectpicker" name="row[wallets]" disabled= "disabled" >
+                {foreach name="walletsList" item="vo"}
+                <option value="{$key}" {in name="key" value="$row.wallets"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+        </div>
+        <label class="control-label col-xs-12 col-sm-1">{:__('Customer')}:</label>
+        <div class="col-xs-12 col-sm-2">
+            <input id="c-customer" class="form-control" name="row[customer]" readonly type="text" value="{$row.customer|htmlentities}">
+        </div>
+        <label class="control-label col-xs-12 col-sm-1">{:__('Amount_total')}:</label>
+        <div class="col-xs-12 col-sm-2">
+            <input id="c-amount_total" class="form-control" step="0.01" name="row[amount_total]" readonly type="number" value="{$row.amount_total|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Product_name')}:</label>
+        <div class="col-xs-12 col-sm-2">
+            <input id="c-product_name" data-rule="required" class="form-control" name="row[product_name]" type="text" value="{$row.product_name|htmlentities}">
+        </div>
+        <label class="control-label col-xs-12 col-sm-1">{:__('Quantity')}:</label>
+        <div class="col-xs-12 col-sm-2">
+            <input id="c-quantity" class="form-control" name="row[quantity]" type="number" value="{$row.quantity|htmlentities}">
+        </div>
+        <label class="control-label col-xs-12 col-sm-1">{:__('Shipping_cost')}:</label>
+        <div class="col-xs-12 col-sm-2">
+            <input id="c-shipping_cost" class="form-control" step="0.01" name="row[shipping_cost]" type="number" value="{$row.shipping_cost|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group" >
+        <label class="control-label col-xs-12 col-sm-2">{:__('Payment_img')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <div class="input-group">
+                <input id="c-payment_img" class="form-control" size="50" name="row[payment_img]" type="text" value="{$row.payment_img|htmlentities}">
+                <div class="input-group-addon no-border no-padding">
+                    <span><button type="button" id="faupload-payment_img" class="btn btn-danger faupload" data-input-id="c-payment_img" data-mimetype="image/gif,image/jpeg,image/png,image/jpg,image/bmp,image/webp" data-multiple="false" data-preview-id="p-payment_img"><i class="fa fa-upload"></i> {:__('Upload')}</button></span>
+                    <span><button type="button" id="fachoose-payment_img" class="btn btn-primary fachoose" data-input-id="c-payment_img" data-mimetype="image/*" data-multiple="false"><i class="fa fa-list"></i> {:__('Choose')}</button></span>
+                </div>
+                <span class="msg-box n-right" for="c-payment_img"></span>
+            </div>
+            <ul class="row list-inline faupload-preview" id="p-payment_img"></ul>
+        </div>
+    </div>
+    <div class="form-group" style="display: none">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Fee_rate')}:</label>
+        <div class="col-xs-12 col-sm-2">
+            <input id="c-fee_rate" class="form-control" step="0.01" name="row[fee_rate]" type="number" value="{$row.fee_rate|htmlentities}">
+        </div>
+        <label class="control-label col-xs-12 col-sm-1" >{:__('Confirm_num')}:</label>
+        <div class="col-xs-12 col-sm-2">
+            <input id="c-confirm_num" class="form-control" name="row[confirm_num]" type="text" value="{$row.confirm_num|htmlentities}">
+        </div>
+        <label class="control-label col-xs-12 col-sm-1" >{:__('Order_state')}:</label>
+        <div class="col-xs-12 col-sm-2">
+            <select  id="c-order_state" class="form-control selectpicker" name="row[order_state]" >
+                {foreach name="orderStateList" item="vo"}
+                <option value="{$key}" {in name="key" value="$row.order_state"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Recipient_name')}:</label>
+        <div class="col-xs-12 col-sm-2">
+            <input id="c-recipient_name" class="form-control" name="row[recipient_name]" type="text" value="{$row.recipient_name|htmlentities}">
+        </div>
+        <label class="control-label col-xs-12 col-sm-1">{:__('Country_id')}:</label>
+        <div class="col-xs-12 col-sm-3">
+            <input id="c-country_id" data-rule="required" data-source="country/index"data-primary-key="country_id" data-field="name" class="form-control selectpage" name="row[country_id]" type="text" value="223">
+        </div>
+        <label class="control-label col-xs-12 col-sm-1">{:__('Zone_id')}:</label>
+        <div class="col-xs-12 col-sm-3">
+            <input id="c-zone_id" data-rule="required" data-source="zone/index" data-primary-key="zone_id"  data-field="name" class="form-control selectpage" name="row[zone_id]" type="text" value="{$row.zone_id|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('City')}:</label>
+        <div class="col-xs-12 col-sm-2">
+            <input id="c-city" class="form-control" name="row[city]" type="text" value="{$row.city|htmlentities}">
+        </div>
+        <label class="control-label col-xs-12 col-sm-1">{:__('Street_adress')}:</label>
+        <div class="col-xs-12 col-sm-3">
+            <input id="c-street_adress" class="form-control" name="row[street_adress]" type="text" value="{$row.street_adress|htmlentities}">
+        </div>
+        <label class="control-label col-xs-12 col-sm-1">{:__('Zip')}:</label>
+        <div class="col-xs-12 col-sm-3">
+            <input id="c-zip" class="form-control" name="row[zip]" type="text" value="{$row.zip|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group" style="display: none">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Amount_due')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-amount_due" class="form-control" step="0.01" name="row[amount_due]" type="number" value="{$row.amount_due|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group" style="display: none">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Payment_method')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-payment_method" class="form-control" name="row[payment_method]" type="text" value="{$row.payment_method|htmlentities}">
+        </div>
+    </div>
+
+
+    <div class="form-group" style="display: none">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Uint_price')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-uint_price" class="form-control" step="0.01" name="row[uint_price]" type="number" value="{$row.uint_price|htmlentities}">
+        </div>
+    </div>
+
+
+    <div class="form-group" style="display: none">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Shipping_address')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-shipping_address" class="form-control" name="row[shipping_address]" type="text" value="{$row.shipping_address|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Tracking_num')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-tracking_num" data-rule="required" class="form-control" name="row[tracking_num]" type="text" value="{$row.tracking_num|htmlentities}">
+        </div>
+    </div>
+
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-primary btn-embossed disabled">{:__('OK')}</button>
+        </div>
+    </div>
+</form>

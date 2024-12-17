@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .invoice-container {
+            width: 80%;
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #007bff;
+        }
+        .header p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .details .left, .details .right {
+            width: 45%;
+        }
+        .details h2 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .details p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+        .items-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .items-table th, .items-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .items-table th {
+            background-color: #f2f2f2;
+        }
+        .items-table tfoot td {
+            font-weight: bold;
+            border-top: 2px solid #ddd;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="invoice-container">
+    <div class="header">
+        <h1>Invoice</h1>
+        <p>Invoice Number: {$data.confirm_num|htmlentities}</p>
+        <p>{$data.order_date|htmlentities}</p>
+    </div>
+
+    <div class="details">
+        <div class="left">
+            <h2>Billing Information</h2>
+            <p>{$data.customer|htmlentities}</p>
+            <p>{$data.street_adress|htmlentities}</p>
+            <p>{$data.city|htmlentities}</p>
+            <p>{$data.country_name|htmlentities}</p>
+<!--            <p>Email: johndoe@example.com</p>-->
+        </div>
+        <div class="right">
+            <h2>Shipping Information</h2>
+            <p>{$data.recipient_name|htmlentities}</p>
+            <p>{$data.street_adress|htmlentities}</p>
+            <p>{$data.city|htmlentities}</p>
+            <p>{$data.country_name|htmlentities}</p>
+<!--            <p>Email: johndoe@example.com</p>-->
+        </div>
+
+    </div>
+
+
+    <table class="items-table">
+        <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Custom {$data.productname|htmlentities}</td>
+            <td>{$data.quantity|htmlentities}</td>
+            <td>${$data.uint_price|htmlentities}</td>
+            <td>${$data.amount_total|htmlentities}</td>
+        </tr>
+
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="3" style="text-align: right;">Subtotal</td>
+            <td>${$data.amount_total|htmlentities}</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: right;">Shipping Fee</td>
+            <td>${$data.shipping_cost|htmlentities}</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: right;">Total</td>
+            <td>${$data.total|htmlentities}</td>
+        </tr>
+
+        </tfoot>
+    </table>
+<!--    <p>Shipping Method: FedEx</p>-->
+    <p>Order Status: {$data.order_state|htmlentities}</p>
+    <p>Tracking Number: <a href="https://t.17track.net/en#nums={$data.tracking_num|htmlentities}" target="_blank">{$data.tracking_num|htmlentities}</a></p>
+
+
+    <div class="footer">
+        <p>Thank you for your purchase!</p>
+        <p>For any inquiries, please contact us at {$data.email|htmlentities}</p>
+    </div>
+</div>
+
+</body>
+</html>

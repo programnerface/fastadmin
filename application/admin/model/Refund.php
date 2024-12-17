@@ -27,12 +27,17 @@ class Refund extends Model
     protected $append = [
         'refund_status_text'
     ];
-    
 
-    
+
+
+    public function getWalletsList()
+    {
+        return ['Zelle' => __('Zelle'), 'Square' => __('Square'), 'Cash App' => __('Cash App'), 'Venmo' => __('Venmo')];
+    }
+
     public function getRefundStatusList()
     {
-        return ['处理中' => __('处理中'), '退款失败' => __('退款失败'), '退款成功' => __('退款成功')];
+        return ['待退款' => __('待退款'), '已退款' => __('已退款')];
     }
 
 
@@ -43,6 +48,12 @@ class Refund extends Model
         return isset($list[$value]) ? $list[$value] : '';
     }
 
+    public function getWalletsTextAttr($value, $data)
+    {
+        $value = $value ? $value : (isset($data['wallets']) ? $data['wallets'] : '');
+        $list = $this->getWalletsList();
+        return isset($list[$value]) ? $list[$value] : '';
+    }
     public function admin()
     {
         return $this->belongsTo('Admin', 'admin_id', 'id', [], 'LEFT')->setEagerlyType(0);

@@ -26,6 +26,7 @@ class WithdrawLog extends Backend
         $this->view->assign("withdrawalStatusList", $this->model->getWithdrawalStatusList());
         $this->view->assign("withdrawalCheckList", $this->model->getWithdrawalCheckList());
         $this->assignconfig('isSuperAdmin',$this->auth->isSuperAdmin());
+        $this->assignconfig('isSuperAdmin',$this->auth->isSuperAdmin());
     }
 
 

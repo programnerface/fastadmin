@@ -26,9 +26,32 @@ class DayTrade extends Backend
     {
         parent::_initialize();
         $this->model = new \app\admin\model\DayTrade;
-        $this->GetDaTrade();
+//        $this->GetDaTrade();
 
     }
+
+    public function index(){
+        //当前是否为关联查询
+        $this->relationSearch = true;
+        //设置过滤方法
+        $this->request->filter(['strip_tags', 'trim']);
+        if (false === $this->request->isAjax()) {
+            return $this->view->fetch();
+        }
+        //如果发送的来源是 Selectpage，则转发到 Selectpage
+        if ($this->request->request('keyField')) {
+            return $this->selectpage();
+        }
+        [$where, $sort, $order, $offset, $limit] = $this->buildparams();
+        $list = $this->model
+            ->with(['admin'])
+            ->where($where)
+            ->order($sort, $order)
+            ->paginate(4);
+        $result = ['total' => $list->total(), 'rows' => $list->items()];
+        return json($result);
+    }
+
 
     public function GetDaTrade(){
         $admin_id =$this->GetAdminId();

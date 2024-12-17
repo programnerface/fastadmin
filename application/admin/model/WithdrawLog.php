@@ -33,7 +33,7 @@ class WithdrawLog extends Model
     
     public function getWithdrawalStatusList()
     {
-        return ['已打款' => __('已打款'), '已到账' => __('已到账'), '处理中' => __('处理中')];
+        return ['待提现' => __('待提现'), '已提现' => __('已提现')];
     }
 
     public function getWithdrawalCheckList()

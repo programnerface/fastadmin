@@ -28,6 +28,11 @@ class DayTrade extends Model
     protected $append = [
 
     ];
+    public function admin()
+    {
+        return $this->belongsTo('Admin', 'admin_id', 'id', [], 'LEFT')->setEagerlyType(0);
+    }
+
   /*  public function YearTrade()
     {
         return $this->hasOne('YearTrade', 'order_date', 'id')->joinType('INNER');
